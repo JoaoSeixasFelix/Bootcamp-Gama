@@ -36,7 +36,7 @@ describe('AppController', () => {
         .get('/')
         .expect(200)
         .then((res) => {
-          expect(res.body.message).toBe('API Blacklist CPF');
+          expect(res.body.message).toBe('API Gama Teste');
           expect(res.body.code).toBe(200);
         });
     });

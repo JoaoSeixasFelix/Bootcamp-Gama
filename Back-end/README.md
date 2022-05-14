@@ -3,7 +3,7 @@
 ## Tecnologias
 
 - [Node JS](https://nodejs.org/en/)
-- [Express](https://expressjs.com/pt-br/)
+- [NestJS](https://nestjs.com/)
 - [Swagger](https://swagger.io/)
 - [MongoDB](https://www.mongodb.com/pt-br)
 
@@ -47,9 +47,10 @@ MONGODB_REMOTE_KEY=mongodb://localhost:27017/myapp
 
 Acesse a documentação deste projeto:
 
-> URL: http://localhost:8080/api-docs/
+> URL: http://localhost:3030/api-docs/
 
 ## 📱 Contatos
 
 | [<img src="https://avatars.githubusercontent.com/u/83595554?v=4" width="100"><br> @MateusCampoSantos](https://github.com/MateusCampoSantos) |
+| [<img src="https://avatars.githubusercontent.com/u/72811733?v=4" width="100"><br> @pedrorosaes](https://github.com/pedrorosaes) |
 | :-----------------------------------------------------------------------------------------------------------------------------------------: |

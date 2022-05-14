@@ -16,7 +16,7 @@ export class AppController {
   })
   initial(@Res() res: Response) {
     return res.status(HttpStatus.OK).json({
-      message: 'API Blacklist CPF',
+      message: 'API Gama Teste',
       code: HttpStatus.OK,
     });
   }
