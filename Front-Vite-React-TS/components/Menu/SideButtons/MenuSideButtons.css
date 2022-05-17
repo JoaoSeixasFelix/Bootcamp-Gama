@@ -1,0 +1,60 @@
+.nav-button{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-button-style {
+    margin-left: 42px;
+    position: absolute;
+    bottom: 0%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    color: #263238;
+  }
+  
+  .my-programs {
+    position: absolute;
+    width: 199px;
+    height: 72px;
+    left: 0px;
+    top: 480px;
+    background: #c4c4c4;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .statistics {
+    position: absolute;
+    width: 199px;
+    height: 72px;
+    left: 0px;
+    top: 543px;
+  }
+  
+  .clients {
+    position: absolute;
+    width: 199px;
+    height: 72px;
+    left: 0px;
+    top: 610px;
+  }
+  
+  .support {
+    position: absolute;
+    width: 199px;
+    height: 72px;
+    left: 0px;
+    top: 680px;
+  }
+  
+  .quit {
+    display: flex;
+    margin-top: 885px;
+    margin-left: 0;
+    margin-bottom: 13px;
+  }
