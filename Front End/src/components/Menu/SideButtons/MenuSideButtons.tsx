@@ -1,41 +1,84 @@
 import React from "react";
-import './MenuSideButtons.css'
+import "./MenuSideButtons.css";
 
+export default function SideButtons() {
+  return (
+    <div className="nav-button">
 
-export default function SideButtons(){
+      <div className="my-programs img-text">
+        <img
+          src="./src/components/Pictures/fact_check.svg"
+          alt="Meus Programas"
+          width={"20px"}
+          height={"20px"}
+          style={{ marginTop: "24px", marginRight:"30px" }}
+          className="picture1"
+        ></img>
 
-    return(
-        <div className="nav-button">
+        <p className="nav-button-style">Meus Programas</p>
 
-            <div className="my-programs img-text">
-              <img
-                    src="../src/Pictures/fact_check.svg"
-                    alt="location"
-                    width={"9px"}
-                    height={"15px"}
-                    style={{ paddingBottom: "2px" }} className="picture1"
-                    ></img>
+      </div>
 
-                <p className="nav-button-style">Meus Programas</p>
+      <div className="statistics">
 
-            </div>
+        <img
+          src="./src/components/Pictures/analytics.svg"
+          alt="Estatisticas"
+          width={"20px"}
+          height={"20px"}
+          style={{ marginTop: "40px", marginRight:"30px" }}
+          className="picture1"
+        ></img>
 
-            <div className="statistics">
-              <p className="nav-button-style">Estatiticas</p>
-            </div>
+        <p className="nav-button-style">Estatiticas</p>
 
-            <div className="clients">
-              <p className="nav-button-style">Clientes</p>
-            </div>
+      </div>
 
-            <div className="support">
-              <p className="nav-button-style">SUPORTE</p>
-            </div>
+      <div className="clients">
 
-            <div className="quit">
-              <p>SAIR</p>
-            </div>
-       
-        </div>
-    )
+        <img
+          src="./src/components/Pictures/people.svg"
+          alt="Clientes"
+          width={"20px"}
+          height={"20px"}
+          style={{ marginTop: "40px", marginRight:"30px" }}
+          className="picture1"
+        ></img>
+
+        <p className="nav-button-style">Clientes</p>
+
+      </div>
+
+      <div className="support">
+
+        <img
+          src="./src/components/Pictures/help.svg"
+          alt="Suporte"
+          width={"20px"}
+          height={"20px"}
+          style={{ marginTop: "40px", marginRight:"30px" }}
+          className="picture1"
+        ></img>
+
+        <p className="nav-button-style">SUPORTE</p>
+
+      </div>
+
+      <div className="quit">
+
+      <img
+          src="./src/components/Pictures/logout.svg"
+          alt="Sair"
+          width={"20px"}
+          height={"20px"}
+          style={{ marginTop: "15px", marginRight:"10px" }}
+          className="picture1"
+        ></img>
+
+        <p>SAIR</p>
+
+      </div>
+
+    </div>
+  );
 }

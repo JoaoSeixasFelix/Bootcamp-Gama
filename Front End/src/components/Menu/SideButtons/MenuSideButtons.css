@@ -1,7 +1,14 @@
 .nav-button{
   display: flex;
-  justify-content: center;
   width: 100%;
+  
+}
+
+.picture1 {
+  display: flex;
+  margin-top: 14px;
+  margin-left: 12px;
+  margin-right: 8px;
 }
 
 .nav-button-style {
@@ -19,6 +26,7 @@
   }
   
   .my-programs {
+    display: flex;
     position: absolute;
     width: 199px;
     height: 72px;
@@ -26,35 +34,45 @@
     top: 480px;
     background: #c4c4c4;
     border-top: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
   }
   
   .statistics {
+    display: flex;
     position: absolute;
     width: 199px;
     height: 72px;
     left: 0px;
     top: 543px;
+    cursor: pointer;
   }
   
   .clients {
+    display: flex;
     position: absolute;
     width: 199px;
     height: 72px;
     left: 0px;
     top: 610px;
+    cursor: pointer;
   }
   
   .support {
+    display: flex;
     position: absolute;
     width: 199px;
     height: 72px;
     left: 0px;
     top: 680px;
+    cursor: pointer;
   }
   
   .quit {
     display: flex;
-    margin-top: 885px;
+    margin-top: 420px;
     margin-left: 0;
     margin-bottom: 13px;
+    cursor: pointer;
   }
+
+  

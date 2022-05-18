@@ -6,7 +6,7 @@ export default function AdressAndContact() {
     <div className="adress-and-contact">
         <div className="img-text">
           <img
-            src="../src/Pictures/location_on.svg"
+            src="./src/components/Pictures/location_on.svg"
             alt="location"
             width={"9px"}
             height={"15px"}
@@ -18,7 +18,7 @@ export default function AdressAndContact() {
 
         <div className="img-text">
           <img
-            src="../src/Pictures/call.svg"
+            src="./src/components/Pictures/call.svg"
             alt="location"
             width={"9px"}
             height={"15px"}

@@ -3,6 +3,7 @@ import AdressAndContact from "../Menu/AdressAndContact/AdressAndContact/AdressAn
 import Picture from "../Menu/PictureRestaurant/PictureRestaurant";
 import Description from "../Menu/RestaurantDescription/RestaurantDescription";
 import SideButtons from "../Menu/SideButtons/MenuSideButtons";
+import HeaderScreen from "../Screen/HeaderScreen";
 import "./DashBoard.css";
 
 export default function dashBoard() {
@@ -10,10 +11,11 @@ export default function dashBoard() {
     <div className="side-bar">
       <div>
         <Picture />
+        <Description />
         <AdressAndContact />
+        <SideButtons />
+        <HeaderScreen />
       </div>
-      <Description />
-      <SideButtons />
     </div>
   );
 }
