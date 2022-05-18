@@ -1,0 +1,11 @@
+.pictures-restaurants {
+    position: absolute;
+    margin-top: 105px;
+    margin-left: 21px;
+    margin-right: 21px;
+    display: flex;
+    width: 157px;
+    height: 157px;
+    background-color: #ffffff;
+    border-radius: 80px;
+  }
