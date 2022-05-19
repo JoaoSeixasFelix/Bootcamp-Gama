@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./menu.css";
 
 const Navigation = () => {
   return (
+
     <div
       style={{
         position: "fixed",
@@ -12,7 +14,9 @@ const Navigation = () => {
         boxShadow: "0px 5px 4px rgba(0, 0, 0, 0.4)",
         backgroundColor: "#C4C4C4",
       }}
-    ></div>
+    >
+      {/* <Link to={"/SingIn"}>Cadastre-se</Link> */}
+    </div>
   );
 };
 

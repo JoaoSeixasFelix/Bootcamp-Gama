@@ -67,7 +67,7 @@ export default function SideButtons() {
       <div className="quit">
 
       <img
-          src="./src/components/Pictures/logout.svg"
+          src="./src/components/Pictures/apple.svg"
           alt="Sair"
           width={"20px"}
           height={"20px"}
