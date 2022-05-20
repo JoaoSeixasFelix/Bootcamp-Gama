@@ -4,6 +4,7 @@ export default function InputSignUp() {
   return (
       
     <div>
+
       <form>
 
         <input
@@ -12,6 +13,7 @@ export default function InputSignUp() {
           type={"text"}
           placeholder="Nome Completo"
         />
+        
         <input
           className="signup-email"
           required

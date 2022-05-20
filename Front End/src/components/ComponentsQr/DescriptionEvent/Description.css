@@ -1,0 +1,25 @@
+.screen-qrcode-instruction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 324px;
+  height: 42px;
+  left: 16px;
+  top: 140px;
+  background: #ffffff;
+}
+
+.user-instruction-event {
+  width: 270px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  color: #130f40;
+  border-bottom: 2px solid  #130f40;
+  margin-bottom: 20px;
+ 
+}

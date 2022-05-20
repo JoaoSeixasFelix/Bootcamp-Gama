@@ -1,0 +1,20 @@
+.nav-bar-qr{
+  display: flex;
+  width: 100%;
+}
+
+.navbar-icons-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  width: 100vw;
+  height: 76px;
+  background: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-top: 4px solid rgba(18, 18, 18, 0.16);
+}
+
+

@@ -1,0 +1,34 @@
+.instruction-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 328px;
+  height: 426px;
+  left: 16px;
+  top: 140px;
+  background: #130f40;
+}
+
+.title {
+  width: 324px;
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.instruction-user {
+  margin-top: 10px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38px;
+  text-align: center;
+  color: #ffffff;
+}

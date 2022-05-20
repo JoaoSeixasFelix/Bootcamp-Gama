@@ -1,0 +1,6 @@
+.screen-qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}

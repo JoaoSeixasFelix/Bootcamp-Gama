@@ -6,7 +6,7 @@ export default function IconsLogin() {
       <div className="others-logins">
         <img
           src="./src/components/Pictures/IconsSingIn/Line_117.svg"
-          alt="Line"
+          alt="Line" width={"100vw"}
           
         />
         <p>Continuar com:</p>

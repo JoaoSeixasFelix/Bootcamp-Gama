@@ -8,12 +8,12 @@ import './SignUp.css'
 
 export default function SignUp() {
     return(
-        <>
+        <div className="signup-layout">
         <Logo/>
         <SignUpInfo/>
         <InputSignUp/>
         <IconsSignUp/>
-        </>
+        </div>
         
     )
 }
