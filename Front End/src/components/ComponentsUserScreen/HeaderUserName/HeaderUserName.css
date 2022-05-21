@@ -1,0 +1,23 @@
+.user-screen-qrcode-description {
+  display: flex ;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 24px;
+  margin-bottom: 28px;
+  gap: 33px;
+  width: 361px;
+  height: 56px;
+}
+
+.user-name-qrcode-description {
+  width: 100px;
+  height: 24px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}

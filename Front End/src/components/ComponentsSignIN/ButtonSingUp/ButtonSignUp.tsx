@@ -5,7 +5,7 @@ export default function SignUp() {
     <div>
 
       <div>
-        <button className="signup-button"> Cadrastar </button>
+        <button className="signup-button"> Cadrastre-se </button>
       </div>
 
       <div className="ref-singup">

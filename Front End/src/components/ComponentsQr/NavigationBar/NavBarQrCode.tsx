@@ -1,6 +1,6 @@
 import "./NavBarQrCode.css";
 
-export default function NavBarQrCode() {
+export default function NavBarUserScreen() {
   return (
     <div className="navbar-icons-home">
       <img

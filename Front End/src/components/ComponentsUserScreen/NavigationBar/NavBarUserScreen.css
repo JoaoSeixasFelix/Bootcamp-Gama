@@ -1,0 +1,17 @@
+.navbar-icons-users {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.navbar-icons-users-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 76px;
+  background: #ffffff;
+  position: fixed;
+  bottom: 0;
+  border-top: 4px solid rgba(18, 18, 18, 0.16);
+}

@@ -7,6 +7,7 @@ import InputSignIn from "../ComponentsSignIN/Inputs/Input"
 import Logo from "../ComponentsSignUp/Logo/Logo"
 import SingInInfo from "../ComponentsSignIN/SingInInfo/SingInInfo"
 import { Link } from "react-router-dom"
+import SignUp from "../SignUp/SignUp"
 
 export default function SignIn() {
     return(
@@ -16,7 +17,12 @@ export default function SignIn() {
         <InputSignIn/>
         <ResetPassword />
         <IconsLogin/>
+        <nav>
+        <Link to={"/SignUp"}>
         <ButtonSignUp/>
+        </Link>
+        </nav>
+        
         </div>
         
     )

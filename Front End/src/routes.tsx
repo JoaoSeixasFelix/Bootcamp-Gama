@@ -5,29 +5,23 @@ import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import HomeAfterLogin from "./components/HomeAfterLogin/HomeAfterLogin";
 import ScreenQrCode from "./components/ScreenQrCode/ScreenQrCode";
+import UserHomePage from "./components/UserScreenRestaurants/UserScreenRestaurants";
+import FavoritesScreen from "./components/FavoritesScreen/FavoriteScreen";
+import LoyaltyScoreScreen from "./components/LoyaltyPointsScreen/LoyaltyPointsScreen";
 
 const R: React.FC = () => {
   return (
-    
     <Router>
-
       <Routes>
-
         <Route
           path="/dashboard"
           caseSensitive={false}
           element={<DashBoard />}
         />
 
-        <Route path="/signin" 
-               caseSensitive={false} 
-               element={<SignIn />} 
-        />
+        <Route path="/signin" caseSensitive={false} element={<SignIn />} />
 
-        <Route path="/signup" 
-               caseSensitive={false} 
-               element={<SignUp />}
-        />
+        <Route path="/signup" caseSensitive={false} element={<SignUp />} />
 
         <Route
           path="/userhome"
@@ -41,13 +35,26 @@ const R: React.FC = () => {
           element={<ScreenQrCode />}
         />
 
+        <Route
+          path="/restaurantuser"
+          caseSensitive={false}
+          element={<UserHomePage />}
+        />
 
+        <Route
+          path="/favoritesrestaurantuser"
+          caseSensitive={false}
+          element={<FavoritesScreen />}
+        />
+
+        <Route
+          path="/scorescreen"
+          caseSensitive={false}
+          element={<LoyaltyScoreScreen />}
+        />
       </Routes>
-      
     </Router>
-
   );
-
 };
 
 export default R;
