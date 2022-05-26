@@ -3,7 +3,7 @@
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://www.typescriptlang.org/pt/docs/handbook/react.html)
-- [Next.js integrated ](https://nextjs.org/learn/excel/typescript)
+- [Next.js](https://nextjs.org/learn/excel/typescript)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## Getting Started
