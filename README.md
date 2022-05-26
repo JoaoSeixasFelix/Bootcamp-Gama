@@ -1,8 +1,9 @@
 
 ## Technologies Used In This Project
 
+- [TypeScript] (https://www.typescriptlang.org/)
 - [React](https://www.typescriptlang.org/pt/docs/handbook/react.html)
-- [Next.js integrated TypeScript](https://nextjs.org/learn/excel/typescript)
+- [Next.js integrated ](https://nextjs.org/learn/excel/typescript)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## Getting Started
