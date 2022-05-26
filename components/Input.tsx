@@ -54,8 +54,8 @@ function Input({
          ${marginBottom}
          ${marginLeft}
          font-bold py-2 px-4 rounded 
-         shadow appearance-none border 
-        text-gray-700
+         shadow appearance-none border-2 
+         text-gray-700
          mb-3
          leading-tight
          focus:outline-nonefirst-letter:focus:shadow-outline`

@@ -17,30 +17,29 @@ const SignIN = () => {
   };
 
   return (
-    <div
-      className="
-      sm:text-center
-      flex 
-      flex-col 
-      items-center 
-      justify-center 
-      h-screen 
-      w-screen
-      "
-    >
+    <div className=" sm:text-center
+                     box-border
+                     flex 
+                     flex-col 
+                     items-center 
+                     justify-center 
+                     h-full
+                     w-screen ">
+
       <Logo />
 
       <div className="flex mr-56 text-4xl text-zinc-500 font-Poppins">
         <Description salutation="Olá!" />
       </div>
 
-      <form
-        className="flex
+        <form
+          className="flex
           flex-col
           items-center
           justify-start
-          w-screen h-1/3 mt-8 mb-12"
-      >
+          w-screen h-72 mt-8 mb-0"
+        >
+
         <Input
           onChange={onChange}
           name="login"
@@ -50,22 +49,23 @@ const SignIN = () => {
           size="w-80"
           bgColor="white"
           textColor="white"
-          borderColor="border-green-300"
+          borderColor="border-green-500"
         />
 
         <Input
           onChange={onChangePassword}
           name="password"
-          placeholder="******************"
+          placeholder="Password"
           type={"password"}
           value={passWordInput}
-          borderColor="border-green-300"
+          borderColor="border-green-500"
           size="w-80"
           bgColor="white"
           textColor="white"
         />
 
         <Button
+
           onClick={() => console.log("I Like Geuci")}
           type={"submit"}
           width="w-80"
@@ -75,30 +75,28 @@ const SignIN = () => {
           marginTop="mt-8"
           marginBottom="mb-6"
           padding="py-2 px-4"
-        >
-          {" "}
-          Entrar{" "}
-        </Button>
+        
+        > Entrar </Button>
 
         <a href="">
           <Description forgotyourpassword="Esqueceu sua senha?" />
         </a>
+
       </form>
 
       <span className="">
         <SocialMediaLogin />
       </span>
 
-      <a
-        href="/signup"
-        className="
-        flex 
-        flex-col 
-        justify-center 
-        items-center 
-        w-screen 
-        mt-10"
-      >
+      <a href="/signup"
+         className="
+         flex 
+         flex-col 
+         justify-center 
+         items-center 
+         w-screen 
+         mt-10">
+
         <Description forgotyourpassword="Entre para o Fid+" />
 
         <Button
@@ -113,11 +111,10 @@ const SignIN = () => {
           marginTop="mt-3.5"
           marginBottom="mb-14"
           padding="py-2 px-4"
-        >
-          {" "}
-          Cadastre-se!{" "}
-        </Button>
+        > Cadastre-se! </Button>
+
       </a>
+      
     </div>
   );
 };

@@ -21,13 +21,21 @@ const SignUp = () => {
   };
 
   return (
-    <div className=" block items-center w-full h-screen py-3">
+    <div className="Container
+                    flex 
+                    flex-col 
+                    items-center 
+                    justify-center 
+                    h-3/4
+                    w-screen">
+      
       <Logo />
 
       <div className="flex flex-col
-                      items-start 
-                      w-52 
-                      ml-9 text-3xl font-Poppins text-slate-900">
+                      justify-start
+                      items-start
+                      w-52 mr-28 text-3xl
+                      font-Poppins text-slate-900">
                         
         <span>Seja</span>
         <span>bem-vindo!</span>
@@ -35,14 +43,16 @@ const SignUp = () => {
       </div>
 
       <form className="flex 
-                       flex-col items-center justify-center h-1/3 mt-8">
+                       flex-col 
+                       items-center justify-center
+                       h-2/4">
         <Input
           onChange={onChange}
           name="login"
           placeholder="Nome Completo"
           value={nameInput}
           type={"text"}
-          size="w-80"
+          size="w-full"
           bgColor="white"
           textColor="white"
           borderColor="border-green-300"
@@ -56,7 +66,7 @@ const SignUp = () => {
           type={"email"}
           value={emailInput}
           borderColor="border-green-300"
-          size="w-80"
+          size="w-full"
           bgColor="white"
           textColor="white"
           marginBottom="mb-7"
@@ -65,31 +75,31 @@ const SignUp = () => {
         <Input
           onChange={onChangePassword}
           name="password"
-          placeholder="******************"
+          placeholder="Password"
           type={"password"}
           value={passWordInput}
           borderColor="border-green-300"
-          size="w-80"
+          size="w-full"
           bgColor="white"
           textColor="white"
         />
 
         <Button
           onClick={() => console.log("I Like Geuci")}
-          type={"submit"}
+          type={"button"}
           width="w-80"
           height="h-12"
           backGroundColor="bg-slate-900"
           textColor="text-white"
           borderColor="border-indigo-900"
-          marginBottom="mt-8"
+          marginBottom="mt-5"
           padding="py-2 px-4"
-        >
-          {" "}
-          Cadastre-se!{" "}
-        </Button>
+        > Cadastre-se! </Button>
+
       </form>
+
     </div>
+
   );
 };
 

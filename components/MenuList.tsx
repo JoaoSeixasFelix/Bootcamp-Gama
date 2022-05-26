@@ -2,6 +2,9 @@ import Image from "next/image";
 
 export const restaurantDescription = (item) => {
 
+            
+const list = (item.points)  ? "" : "list-item"
+
   return (
 
     <div className="flex flex-col
@@ -27,22 +30,15 @@ export const restaurantDescription = (item) => {
           >
             <p className="text-base">{item.restaurantName}</p>
 
-            <p
-              className="text-base 
-                         text-emerald-400"
-            >
+            <p className="user-points text-base text-emerald-400" >
               {item.points}
             </p>
 
-            <p
-              className="ml-3 
-                               text-zinc-500 
-                                 text-sm"
-            >
+            <p className={`model-plate ${list} ml-4 text-zinc-500 text-xs`}>
               {item.plateModel}
             </p>
 
-            <p className="text-zinc-500 text-xs">{item.localization}</p>
+            <p className="ml-0 text-zinc-500 text-xs">{item.localization}</p>
 
             <p className="font-light">{item.validate}</p>
             
