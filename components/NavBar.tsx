@@ -2,6 +2,7 @@ import Image from "next/image";
 import SideList from "../public/sidelist.svg";
 import classNames from "classnames";
 import Link from "next/link";
+import UserModal from "./UserModal";
 
 export default function NavBar(username) {
   
@@ -15,18 +16,23 @@ export default function NavBar(username) {
             className="flex ml-4 mt-3 mb-3
                           items-center w-10 h-10 
                           rounded-full bg-white"
-          ></div>
+          >
+
+          </div>
 
           <div
             className={`flex 
                           justify-between
                           items-center
-                          ml-5 mr-9 mb-5 text-white`}
+                          ml-5 mr-10 mb-5 text-white`}
           >
-            <p className="font-Poppins"> Olá, {username.name} </p>
+             
+              <p className="font-Poppins"> Olá, {username.name} </p>
 
-            <Image src={SideList} />
-          </div>
+              <UserModal/>
+
+            </div>
+            
         </div>
 
         <div className="block bg-white border-b-2 border-gray-200">
