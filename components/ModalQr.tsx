@@ -44,10 +44,11 @@ export default function Modal() {
               {/*content*/}
 
               <div
-                className="border-0 
-                              rounded-lg shadow-lg 
-                              relative flex flex-col w-full 
-                              bg-white outline-none focus:outline-none"
+                className=" border-0 
+                            rounded-lg shadow-lg 
+                            relative flex flex-col w-full 
+                            bg-white outline-none
+                            1focus:outline-none"
               >
 
                 <div className="relative p-4 flex-auto">

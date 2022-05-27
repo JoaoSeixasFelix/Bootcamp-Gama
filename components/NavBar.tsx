@@ -1,5 +1,3 @@
-import Image from "next/image";
-import SideList from "../public/sidelist.svg";
 import classNames from "classnames";
 import Link from "next/link";
 import UserModal from "./UserModal";
@@ -8,23 +6,25 @@ export default function NavBar(username) {
   
   return (
 
-    <div className="flex flex-col w-screen">
+    <div className="flex flex-col">
 
-      <nav className="flex flex-col w-screen">
+      <nav className="flex flex-col ">
+
         <div className="bg-green-500 ">
-          <div
-            className="flex ml-4 mt-3 mb-3
-                          items-center w-10 h-10 
-                          rounded-full bg-white"
-          >
 
-          </div>
+            <div
+              className=" user-picture ml-5 flex mt-3 mb-3
+                            items-center w-10 h-10 
+                            rounded-full bg-white"
+            >
+
+            </div>
 
           <div
             className={`flex 
-                          justify-between
-                          items-center
-                          ml-5 mr-10 mb-5 text-white`}
+                        justify-between
+                        items-center
+                        ml-5 mr-8 mb-5 text-white`}
           >
              
               <p className="font-Poppins"> Olá, {username.name} </p>
