@@ -5,7 +5,7 @@
 - [React](https://www.typescriptlang.org/pt/docs/handbook/react.html)
 - [Next.js](https://nextjs.org/learn/excel/typescript)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [headlessui](https://headlessui.dev/react/listbox)
+- [Headlessui](https://headlessui.dev/react/listbox)
 
 ## Getting Started
 
