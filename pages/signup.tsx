@@ -1,28 +1,36 @@
 import Input from "../components/Input";
-import { useState } from "react";
+import { useState, useCallback, FormEvent } from "react";
+import { api } from "./api/api";
 import Button from "../components/Button";
-import Description from "../components/Description";
 import Logo from "../components/Logo";
 
 const SignUp = () => {
 
-  const [nameInput, setNameInput] = useState("");
+  const [signUpNameInput, setSignUpNameInput] = useState("");
   const onChangeLogin = (login: string) => {
-    console.log(nameInput)
-    setNameInput(login);
+    console.log(signUpNameInput)
+    setSignUpNameInput(login);
   };
 
-  const [passWordInput, setpassWordInput] = useState("");
+  const [signUpPassWordInput, setSignupPassWordInput] = useState("");
   const onChangePassword = (pass: string) => {
-    console.log(passWordInput)
-    setpassWordInput(pass);
+    console.log(signUpPassWordInput)
+    setSignupPassWordInput(pass);
   };
 
-  const [emailInput, setemailInput] = useState("");
+  const [signUpEmailInput, setSignUpEmailInput] = useState("");
   const onChangeEmail = (email: string) => {
-    console.log(emailInput)
-    setemailInput(email);
+    console.log(signUpEmailInput)
+    setSignUpEmailInput(email);
   };
+
+  const handleSubmit = useCallback(
+    (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", signUpPassWordInput);
+    },
+    [signUpPassWordInput]
+  );
 
   return (
     <div className="Container
@@ -49,12 +57,12 @@ const SignUp = () => {
       <form className="flex 
                        flex-col 
                        items-center justify-center
-                       h-2/4" onSubmit={() => {}}>
+                       h-2/4" onSubmit={(e) => {handleSubmit(e)}}>
         <Input
-         onValueChange={onChangeLogin}
+          onValueChange={onChangeLogin}
           name="login"
           placeholder="Nome Completo"
-          value={nameInput}
+          value={signUpNameInput}
           type={"text"}
           size="w-full"
           bgColor="white"
@@ -64,11 +72,11 @@ const SignUp = () => {
         />
 
         <Input
-         onValueChange={onChangeEmail}
+          onValueChange={onChangeEmail}
           name="signup-email"
           placeholder="E-mail"
           type={"email"}
-          value={emailInput}
+          value={signUpEmailInput}
           borderColor="border-green-300"
           size="w-full"
           bgColor="white"
@@ -77,11 +85,11 @@ const SignUp = () => {
         />
 
         <Input
-         onValueChange={onChangePassword}
+          onValueChange={onChangePassword}
           name="password"
           placeholder="Password"
           type={"password"}
-          value={passWordInput}
+          value={signUpPassWordInput}
           borderColor="border-green-300"
           size="w-full"
           bgColor="white"
@@ -90,7 +98,7 @@ const SignUp = () => {
 
         <Button
           onClick={() =>{}}
-          type={"button"}
+          type={"submit"}
           width="w-80"
           height="h-12"
           backGroundColor="bg-slate-900"

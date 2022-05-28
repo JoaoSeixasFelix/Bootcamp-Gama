@@ -14,18 +14,18 @@ const SignIN = () => {
     console.log(nameInput);
   };
 
-  const [passWordInput, setpassWordInput] = useState("");
+  const [passWordInput, setPassWordInput] = useState("");
   const onChangePassword = (pass: string) => {
     console.log(passWordInput);
-    setpassWordInput(pass);
+    setPassWordInput(pass);
   };
 
   const handleSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", nameInput);
+      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", passWordInput);
     },
-    [nameInput]
+    [passWordInput]
   );
 
   return (
