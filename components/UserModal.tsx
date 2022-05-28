@@ -3,7 +3,7 @@ import Image from 'next/image'
 import SideList from "../public/sidelist.svg"
 import { Fragment } from 'react'
 
-const solutions = [
+const sections = [
   {
     name: 'Profile',
     description: '',
@@ -54,7 +54,7 @@ export default function UserModal() {
                                 shadow-lg ring-1 ring-black ring-opacity-5">
 
                   <div className="relative grid gap-8 bg-white p-7 ">
-                    {solutions.map((item) => (
+                    {sections.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}

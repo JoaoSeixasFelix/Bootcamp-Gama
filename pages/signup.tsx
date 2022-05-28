@@ -5,18 +5,22 @@ import Description from "../components/Description";
 import Logo from "../components/Logo";
 
 const SignUp = () => {
+
   const [nameInput, setNameInput] = useState("");
-  const onChange = (str: string) => {
-    setNameInput(str);
+  const onChangeLogin = (login: string) => {
+    console.log(nameInput)
+    setNameInput(login);
   };
 
   const [passWordInput, setpassWordInput] = useState("");
   const onChangePassword = (pass: string) => {
+    console.log(passWordInput)
     setpassWordInput(pass);
   };
 
   const [emailInput, setemailInput] = useState("");
   const onChangeEmail = (email: string) => {
+    console.log(emailInput)
     setemailInput(email);
   };
 
@@ -45,9 +49,9 @@ const SignUp = () => {
       <form className="flex 
                        flex-col 
                        items-center justify-center
-                       h-2/4">
+                       h-2/4" onSubmit={() => {}}>
         <Input
-          onChange={onChange}
+         onValueChange={onChangeLogin}
           name="login"
           placeholder="Nome Completo"
           value={nameInput}
@@ -60,7 +64,7 @@ const SignUp = () => {
         />
 
         <Input
-          onChange={onChangeEmail}
+         onValueChange={onChangeEmail}
           name="signup-email"
           placeholder="E-mail"
           type={"email"}
@@ -73,7 +77,7 @@ const SignUp = () => {
         />
 
         <Input
-          onChange={onChangePassword}
+         onValueChange={onChangePassword}
           name="password"
           placeholder="Password"
           type={"password"}
@@ -85,7 +89,7 @@ const SignUp = () => {
         />
 
         <Button
-          onClick={() => console.log("I Like Geuci")}
+          onClick={() =>{}}
           type={"button"}
           width="w-80"
           height="h-12"

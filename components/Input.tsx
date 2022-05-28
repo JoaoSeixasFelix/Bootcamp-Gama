@@ -1,7 +1,7 @@
 import classNames from "classnames";
 
 type Props = {
-  onChange: (str?, pass?) => void;
+  onValueChange: (login?, pass?, email?) => void;
   placeholder: string;
   name: string;
   value?: string;
@@ -14,11 +14,14 @@ type Props = {
   marginTop?: string;
   marginRight?: string;
   marginBottom?: string;
-  marginLeft?: string;  
+  marginLeft?: string;
+  login?: string;
+  email?: string;
+  password?: string;
 };
 
 function Input({
-  onChange,
+  onValueChange,
   name,
   placeholder,
   value = "",
@@ -32,13 +35,11 @@ function Input({
   marginRight,
   marginBottom,
   marginLeft,
-}: Props
-
-) {
- 
+}: Props) {
+  
   return (
     <input
-      onChange={(event) => onChange(event.target.value)}
+    onChange={(e) => onValueChange(e.target.value)}
       name={name}
       placeholder={placeholder}
       value={value}

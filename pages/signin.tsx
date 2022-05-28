@@ -1,47 +1,64 @@
 import Input from "../components/Input";
-import { useState } from "react";
+import { useState, useCallback, FormEvent } from "react";
 import Button from "../components/Button";
 import Description from "../components/Description";
 import Logo from "../components/Logo";
 import SocialMediaLogin from "../components/SocialMediaIcons";
+import { api } from "../pages/api/api";
+import Link from "next/link";
 
 const SignIN = () => {
   const [nameInput, setNameInput] = useState("");
-  const onChange = (str: string) => {
-    setNameInput(str);
+  const onChangeLogin = (login: string) => {
+    setNameInput(login);
+    console.log(nameInput);
   };
 
   const [passWordInput, setpassWordInput] = useState("");
   const onChangePassword = (pass: string) => {
+    console.log(passWordInput);
     setpassWordInput(pass);
   };
 
+  const handleSubmit = useCallback(
+    (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", nameInput);
+    },
+    [nameInput]
+  );
+
   return (
-    <div className=" sm:text-center
+    <div
+      className=" sm:text-center
                      box-border
                      flex 
                      flex-col 
                      items-center 
                      justify-center 
                      h-full
-                     w-screen ">
-
+                     w-screen "
+    >
       <Logo />
 
-      <div className="flex mr-56 text-4xl text-zinc-500 font-Poppins">
+      <div
+        className="flex mr-56 text-4xl 
+                      text-zinc-500
+                      font-Poppins"
+      >
         <Description salutation="Olá!" />
       </div>
 
-        <form
-          className="flex
-          flex-col
-          items-center
-          justify-start
-          w-screen h-72 mt-8 mb-0"
-        >
-
+      <form
+        className="flex
+                       flex-col
+                       items-center
+                       justify-start
+                       w-screen h-72 mt-8 mb-0"
+        onSubmit={(e) => handleSubmit(e)}
+      >
         <Input
-          onChange={onChange}
+          onValueChange={onChangeLogin}
           name="login"
           placeholder="Username"
           value={nameInput}
@@ -53,7 +70,7 @@ const SignIN = () => {
         />
 
         <Input
-          onChange={onChangePassword}
+          onValueChange={onChangePassword}
           name="password"
           placeholder="Password"
           type={"password"}
@@ -65,8 +82,7 @@ const SignIN = () => {
         />
 
         <Button
-
-          onClick={() => console.log("I Like Geuci")}
+          onClick={() => {}}
           type={"submit"}
           width="w-80"
           height="h-12"
@@ -75,46 +91,52 @@ const SignIN = () => {
           marginTop="mt-8"
           marginBottom="mb-6"
           padding="py-2 px-4"
-        
-        > Entrar </Button>
+        >
+          {" "}
+          Entrar{" "}
+        </Button>
 
-        <a href="">
-          <Description forgotyourpassword="Esqueceu sua senha?" />
-        </a>
-
+        <Link href={"/"}>
+          <a>
+            <Description forgotyourpassword="Esqueceu sua senha?" />
+          </a>
+        </Link>
       </form>
 
-      <span className="">
+      <span className="IconsLoginSocialMedia">
         <SocialMediaLogin />
       </span>
 
-      <a href="/signup"
-         className="
-         flex 
-         flex-col 
-         justify-center 
-         items-center 
-         w-screen 
-         mt-10">
+      <Link href={"/signup"}>
+        <a
+          className="
+            flex 
+            flex-col 
+            justify-center 
+            items-center 
+            w-screen 
+            mt-10"
+        >
+          <Description forgotyourpassword="Entre para o Fid+" />
 
-        <Description forgotyourpassword="Entre para o Fid+" />
-
-        <Button
-          onClick={() => console.log("Cadastro!")}
-          type={"button"}
-          width="w-80"
-          height="h-12"
-          backGroundColor="transparent"
-          textColor="text-slate-900"
-          border="border-2"
-          borderColor="border-blue-900"
-          marginTop="mt-3.5"
-          marginBottom="mb-14"
-          padding="py-2 px-4"
-        > Cadastre-se! </Button>
-
-      </a>
-      
+          <Button
+            onClick={() => console.log("Cadastro!")}
+            type={"button"}
+            width="w-80"
+            height="h-12"
+            backGroundColor="transparent"
+            textColor="text-slate-900"
+            border="border-2"
+            borderColor="border-blue-900"
+            marginTop="mt-3.5"
+            marginBottom="mb-14"
+            padding="py-2 px-4"
+          >
+            {" "}
+            Cadastre-se!{" "}
+          </Button>
+        </a>
+      </Link>
     </div>
   );
 };
