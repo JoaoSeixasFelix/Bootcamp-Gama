@@ -20,12 +20,17 @@ const SignIN = () => {
     setPassWordInput(pass);
   };
 
+  const userLogin = {
+    name:nameInput,
+    password: passWordInput,
+  };
+
   const handleSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", passWordInput);
+      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", userLogin);
     },
-    [passWordInput]
+    [userLogin]
   );
 
   return (

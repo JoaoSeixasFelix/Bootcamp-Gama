@@ -3,12 +3,20 @@ import { useState, useCallback, FormEvent } from "react";
 import { api } from "./api/api";
 import Button from "../components/Button";
 import Logo from "../components/Logo";
+import axios from "axios";
+
 
 const SignUp = () => {
   const [signUpNameInput, setSignUpNameInput] = useState("");
   const onChangeLogin = (login: string) => {
     console.log(signUpNameInput);
     setSignUpNameInput(login);
+  };
+  
+  const [signUpEmailInput, setSignUpEmailInput] = useState("");
+  const onChangeEmail = (email: string) => {
+    console.log(signUpEmailInput);
+    setSignUpEmailInput(email);
   };
 
   const [signUpPassWordInput, setSignupPassWordInput] = useState("");
@@ -17,24 +25,20 @@ const SignUp = () => {
     setSignupPassWordInput(pass);
   };
 
-  const [signUpEmailInput, setSignUpEmailInput] = useState("");
-  const onChangeEmail = (email: string) => {
-    console.log(signUpEmailInput);
-    setSignUpEmailInput(email);
-  };
 
-  const Tudo = {
+  const userLogin = {
     name: signUpNameInput,
     email: signUpEmailInput,
-    password: signUpEmailInput,
+    password: signUpPassWordInput,
   };
 
+  
   const handleSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", Tudo);
+      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", userLogin);
     },
-    [Tudo]
+    [userLogin]
   );
 
   return (
@@ -125,5 +129,6 @@ const SignUp = () => {
     </div>
   );
 };
+
 
 export default SignUp;
