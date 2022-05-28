@@ -3,7 +3,7 @@ import logo from "../public/vector.svg";
 
 export default function Logo() {
   return (
-    <div className="md:390px flex w-3/6 mr-32 mb-12">
+    <div className="flex justify-center">
       <Image
         src={logo}
         alt= "Picture Logo of Fig+"

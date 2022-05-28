@@ -4,6 +4,7 @@ import QrCodeScreen from "./QrCodeScreen";
 import QrIcon from "../public/qrcode.svg"
 import Image from "next/image";
 
+
 export default function Modal() {
   const [showModal, setShowModal] = React.useState(false);
   return (

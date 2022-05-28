@@ -1,7 +1,8 @@
 import classNames from "classnames";
+import { Dispatch, SetStateAction } from "react";
 
 type Props = React.PropsWithChildren<{
-  onClick: () => void;
+    onClick: () => void | Dispatch<SetStateAction<any>>;
   type: "submit" | "button" | "reset" | undefined;
   disabled?: boolean;
   width?: string;
