@@ -5,59 +5,70 @@ import Button from "../components/Button";
 import Logo from "../components/Logo";
 
 const SignUp = () => {
-
   const [signUpNameInput, setSignUpNameInput] = useState("");
   const onChangeLogin = (login: string) => {
-    console.log(signUpNameInput)
+    console.log(signUpNameInput);
     setSignUpNameInput(login);
   };
 
   const [signUpPassWordInput, setSignupPassWordInput] = useState("");
   const onChangePassword = (pass: string) => {
-    console.log(signUpPassWordInput)
+    console.log(signUpPassWordInput);
     setSignupPassWordInput(pass);
   };
 
   const [signUpEmailInput, setSignUpEmailInput] = useState("");
   const onChangeEmail = (email: string) => {
-    console.log(signUpEmailInput)
+    console.log(signUpEmailInput);
     setSignUpEmailInput(email);
+  };
+
+  const Tudo = {
+    name: signUpNameInput,
+    email: signUpEmailInput,
+    password: signUpEmailInput,
   };
 
   const handleSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", signUpPassWordInput);
+      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", Tudo);
     },
-    [signUpPassWordInput]
+    [Tudo]
   );
 
   return (
-    <div className="Container
+    <div
+      className="Container
                     flex 
                     flex-col 
                     items-center 
                     justify-center 
                     h-3/4
-                    w-screen">
-      
+                    w-screen"
+    >
       <Logo />
 
-      <div className="flex flex-col
+      <div
+        className="flex flex-col
                       justify-start
                       items-start
                       w-52 mr-28 text-3xl
-                      font-Poppins text-slate-900">
-                        
+                      font-Poppins text-slate-900"
+      >
         <span>Seja</span>
         <span>bem-vindo!</span>
-        
       </div>
 
-      <form className="flex 
+      <form
+        className="flex 
                        flex-col 
                        items-center justify-center
-                       h-2/4" onSubmit={(e) => {handleSubmit(e)}}>
+                       h-2/4"
+        onSubmit={(e) => {
+          handleSubmit(e);
+        }}
+      >
         <Input
           onValueChange={onChangeLogin}
           name="login"
@@ -97,7 +108,7 @@ const SignUp = () => {
         />
 
         <Button
-          onClick={() =>{}}
+          onClick={() => {}}
           type={"submit"}
           width="w-80"
           height="h-12"
@@ -106,12 +117,12 @@ const SignUp = () => {
           borderColor="border-indigo-900"
           marginBottom="mt-5"
           padding="py-2 px-4"
-        > Cadastre-se! </Button>
-
+        >
+          {" "}
+          Cadastre-se!{" "}
+        </Button>
       </form>
-
     </div>
-
   );
 };
 
