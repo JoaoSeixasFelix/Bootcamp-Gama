@@ -39,7 +39,7 @@ function Input({
   
   return (
     <input
-    onChange={(e) => onValueChange(e.target.value)}
+    onChange={(e) =>onValueChange(e.target.value)}
       name={name}
       placeholder={placeholder}
       value={value}
