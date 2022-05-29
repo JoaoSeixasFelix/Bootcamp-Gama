@@ -1,17 +1,14 @@
 import React from "react";
 import Button from "./Button";
 import QrCodeScreen from "./QrCodeScreen";
-import QrIcon from "../public/qrcode.svg"
+import QrIcon from "../public/qrcode.svg";
 import Image from "next/image";
-
 
 export default function Modal() {
   const [showModal, setShowModal] = React.useState(false);
   return (
-
     <>
       <Button
-
         onClick={() => setShowModal(true)}
         type={"button"}
         width="w-51"
@@ -20,10 +17,10 @@ export default function Modal() {
         borderColor="transparent"
         margin="m-0"
         padding="p-0"
-        
-        
-
-      > <Image src={QrIcon}/> </Button>
+      >
+        {" "}
+        <Image src={QrIcon} />{" "}
+      </Button>
 
       {showModal ? (
         <>
@@ -37,32 +34,23 @@ export default function Modal() {
                           fixed inset-0 
                           z-50 outline-none focus:outline-none"
           >
-            <div
-              className="relative
-                            w-auto my-6 
-                            mx-auto max-w-3xl"
-            >
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
               {/*content*/}
 
               <div
-                className=" border-0 
-                            rounded-lg shadow-lg 
-                            relative flex flex-col w-full 
-                            bg-white outline-none
-                            1focus:outline-none"
+                className=" border-0  rounded-lg shadow-lg  relative flex flex-col w-full  bg-white outline-none focus:outline-none"
               >
-
                 <div className="relative p-4 flex-auto">
-                    <QrCodeScreen/>
+                  <QrCodeScreen />
                 </div>
 
                 {/*footer*/}
 
-                <div className="flex items-center justify-end 
+                <div
+                  className="flex items-center justify-end 
                                 p-6 border-t border-solid 
-                              border-slate-200 rounded-b">
-                  
-
+                              border-slate-200 rounded-b"
+                >
                   <button
                     className="bg-emerald-500 text-white
                                active:bg-emerald-600
@@ -71,11 +59,12 @@ export default function Modal() {
                                 hover:shadow-lg outline-none 
                                 focus:outline-none mr-1 mb-1 ease-linear
                                 transition-all duration-150"
-                                
                     type="button"
                     onClick={() => setShowModal(false)}
-                  > Close </button>
-
+                  >
+                    {" "}
+                    Close{" "}
+                  </button>
                 </div>
               </div>
             </div>

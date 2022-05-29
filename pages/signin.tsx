@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import Description from "../components/Description";
 import Logo from "../components/Logo";
 import SocialMediaLogin from "../components/SocialMediaIcons";
-import { api } from "../pages/api/api";
+import { api } from "../services/api";
 import Link from "next/link";
 
 const SignIN = () => {
