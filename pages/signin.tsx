@@ -20,7 +20,6 @@ const SignIN = () => {
     setPassWordInput(pass);
   };
 
-
   const handleSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -33,32 +32,15 @@ const SignIN = () => {
   );
 
   return (
-    <div
-      className=" text-center
-                     box-border
-                     flex 
-                     flex-col 
-                     items-center 
-                     justify-center 
-                     h-full
-                     w-screen "
-    >
+    <div className=" text-center box-border flex flex-col items-center justify-center h-full w-screen">
       <Logo />
 
-      <div
-        className="flex mr-56 text-4xl 
-                      text-zinc-500
-                      font-Poppins"
-      >
+      <div className="flex mr-56 text-4xl text-zinc-500 font-Poppins">
         <Description salutation="Olá!" />
       </div>
 
       <form
-        className="flex
-                       flex-col
-                       items-center
-                       justify-start
-                       w-screen h-72 mt-8 mb-0"
+        className="flex flex-col items-center justify-start w-screen h-72 mt-8 mb-0"
         onSubmit={(e) => handleSubmit(e)}
       >
         <Input
@@ -71,6 +53,7 @@ const SignIN = () => {
           bgColor="white"
           textColor="white"
           borderColor="border-green-500"
+          required
         />
 
         <Input
@@ -83,6 +66,7 @@ const SignIN = () => {
           size="w-80"
           bgColor="white"
           textColor="white"
+          required
         />
 
         <Button
@@ -112,15 +96,7 @@ const SignIN = () => {
       </span>
 
       <Link href={"/signup"}>
-        <a
-          className="
-            flex 
-            flex-col 
-            justify-center 
-            items-center 
-            w-screen 
-            mt-10"
-        >
+        <a className=" flex flex-col justify-center items-center w-screen mt-10">
           <Description forgotyourpassword="Entre para o Fid+" />
 
           <Button

@@ -7,17 +7,24 @@ export default function NavBar(username) {
     <div className="flex flex-col">
       <nav className="flex flex-col ">
         <div className="bg-green-500 ">
-          <div className=" user-picture ml-5 flex mt-3 mb-3 items-center w-10 h-10 rounded-full bg-white" />
+          <div className=" user-picture ml-5 flex mt-3 mb-3 items-center w-12 h-10 rounded-full bg-white">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+              className="rounded-full w-32 shadow-lg"
+              alt="Avatar"
+            />
+          </div>
 
           <div
-            className={`flex justify-between items-center ml-5 mr-8 mb-5 text-white`}>
+            className={`flex justify-between items-center ml-5 mr-4 mb-3 text-white`}
+          >
             <p className="font-Poppins"> Olá, {username.name} </p>
             <UserModal />
           </div>
         </div>
         <div className="block bg-white border-b-2 border-gray-200">
           <ul
-            className={classNames("w-screen flex flex-row justify-around mt-5")}
+            className={classNames("w-screen flex flex-row justify-around mt-3")}
           >
             <Link href={"/userhomepage"}>
               <a>

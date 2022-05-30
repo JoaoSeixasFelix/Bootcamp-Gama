@@ -44,33 +44,16 @@ const SignUp = () => {
   );
 
   return (
-    <div
-      className="Container
-                    flex 
-                    flex-col 
-                    items-center 
-                    justify-center 
-                    h-3/4
-                    w-screen"
-    >
+    <div className="Container flex flex-col items-center justify-center h-3/4  w-screen">
       <Logo />
 
-      <div
-        className="flex flex-col
-                      justify-start
-                      items-start
-                      w-52 mr-28 text-3xl
-                      font-Poppins text-slate-900"
-      >
+      <div className="flex flex-col justify-start items-start w-52 mr-28 mb-7 text-3xl font-Poppins text-slate-900">
         <span>Seja</span>
         <span>bem-vindo!</span>
       </div>
 
       <form
-        className="flex 
-                       flex-col 
-                       items-center justify-center
-                       h-2/4"
+        className="flex flex-col items-center justify-center h-2/4"
         onSubmit={(e) => {
           handleSubmit(e);
         }}
@@ -86,6 +69,7 @@ const SignUp = () => {
           textColor="text-gray-700"
           borderColor="border-green-300"
           marginBottom="mb-7"
+          required
         />
 
         <Selection
@@ -111,6 +95,7 @@ const SignUp = () => {
           bgColor="white"
           textColor="black"
           marginBottom="mb-7"
+          required
         />
 
         <Input
@@ -123,6 +108,7 @@ const SignUp = () => {
           size="w-full"
           bgColor="white"
           textColor="white"
+          required
         />
 
         <Button

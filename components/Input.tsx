@@ -18,6 +18,7 @@ type inputProps = {
   login?: string;
   email?: string;
   password?: string;
+  required?: boolean;
 };
 
 type selectProps = {
@@ -54,6 +55,7 @@ export const Input = ({
   marginRight,
   marginBottom,
   marginLeft,
+  required
 }: inputProps) => {
   return (
     <input
@@ -62,6 +64,7 @@ export const Input = ({
       placeholder={placeholder}
       value={value}
       type={type}
+      required
       className={classNames(
         `${borderColor}
          ${bgColor}
@@ -79,7 +82,6 @@ export const Input = ({
     />
   );
 };
-
 
 export const Selection = ({
   onValueChange,
@@ -115,7 +117,9 @@ export const Selection = ({
            ${marginBottom}
            ${marginLeft}
            font-Poppins py-2 px-4 rounded text-xs
-           shadow border-2 mb-3 appearance-none ${(value)?("text-black"):("text-gray-400")}
+           shadow border-2 mb-3 appearance-none ${
+             value ? "text-black" : "text-gray-400"
+           }
            `
         )}
       >
