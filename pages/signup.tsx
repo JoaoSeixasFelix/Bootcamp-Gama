@@ -1,4 +1,4 @@
-import Input from "../components/Input";
+import Input, { Selection } from "../components/Input";
 import { useState, useCallback, FormEvent } from "react";
 import { api } from "../services/api";
 import Button from "../components/Button";
@@ -18,6 +18,12 @@ const SignUp = () => {
     setSignUpEmailInput(email);
   };
 
+  const [signUpTypeClient, setSignUpTypeClient] = useState("");
+  const onChangeSelection = (typeCLient: string) => {
+    console.log(signUpTypeClient);
+    setSignUpTypeClient(typeCLient);
+  };
+
   const [signUpPassWordInput, setSignupPassWordInput] = useState("");
   const onChangePassword = (pass: string) => {
     console.log(signUpPassWordInput);
@@ -29,11 +35,12 @@ const SignUp = () => {
       e.preventDefault();
       api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", {
         name: signUpNameInput,
+        typeclient: signUpTypeClient,
         email: signUpEmailInput,
         password: signUpPassWordInput,
       });
     },
-    [signUpEmailInput, signUpEmailInput, signUpPassWordInput]
+    [signUpEmailInput, signUpEmailInput, signUpTypeClient, signUpPassWordInput]
   );
 
   return (
@@ -76,8 +83,20 @@ const SignUp = () => {
           type={"text"}
           size="w-full"
           bgColor="white"
-          textColor="white"
+          textColor="text-gray-700"
           borderColor="border-green-300"
+          marginBottom="mb-7"
+        />
+
+        <Selection
+          onValueChange={onChangeSelection}
+          name="typeOfClient"
+          placeholderSelection="Tipo de Cliente"
+          value={signUpTypeClient}
+          borderColor="border-green-300"
+          width="w-80"
+          bgColor="bg-white"
+          textColor="text-gray-700"
           marginBottom="mb-7"
         />
 

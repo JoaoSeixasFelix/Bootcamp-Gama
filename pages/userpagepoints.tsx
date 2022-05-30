@@ -19,8 +19,8 @@ const userPagePoints = () => {
       <div className="fixed right-0 bottom-0 z-20">
         <Modal />
       </div>
-      <div className="overflow-auto h-4/5 mb-6 mt-3">
-        <div className="w-screen font-Roboto">
+      <div className="w-screen overflow-auto h-4/5 mb-6 mt-3">
+        <div className="font-Roboto">
           <RestaurantDescription
             picture={Feijao}
             restaurantName={"Feijâo"}

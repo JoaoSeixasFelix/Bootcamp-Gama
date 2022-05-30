@@ -5,12 +5,7 @@ import Image from "next/image";
 const Home: NextPage = () => {
   return (
     <div>
-      <Head>
-      </Head>
-      <main>
-      </main>
-      <footer>
-      </footer>
+      
     </div>
   );
 };

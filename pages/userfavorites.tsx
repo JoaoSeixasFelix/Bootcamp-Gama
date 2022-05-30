@@ -19,7 +19,8 @@ const userFavorites = () => {
       <div className="fixed right-0 bottom-0 z-20">
         <Modal />
       </div>
-      <div className=" overflow-scroll mt-3 w-screen h-4/5 mb-6">
+      <div className="flex flex-col overflow-y-scroll mb-6 w-screen h-4/5">
+        <div className="mt-1" >
         <RestaurantDescription
           picture={Feijao}
           restaurantName={"Feijâo"}
@@ -55,6 +56,7 @@ const userFavorites = () => {
           localization={"Centro"}
           favIcon={FavIcon}
         />
+        </div>
       </div>
     </div>
   );

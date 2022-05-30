@@ -1,11 +1,11 @@
 import classNames from "classnames";
 
-type Props = {
+type inputProps = {
   onValueChange: (login?, pass?, email?) => void;
   placeholder: string;
   name: string;
   value?: string;
-  type: "text" | "password" | "email" | undefined;
+  type: "text" | "password" | "email" | "select" | undefined;
   size: string;
   bgColor: string;
   textColor: string;
@@ -20,7 +20,78 @@ type Props = {
   password?: string;
 };
 
-function Input({
+type selectProps = {
+  onValueChange: (login?, pass?, email?) => void;
+  placeholderSelection: string;
+  name: string;
+  value?: string;
+  width: string;
+  bgColor: string;
+  textColor: string;
+  borderColor: string;
+  margin?: string;
+  marginTop?: string;
+  marginRight?: string;
+  marginBottom?: string;
+  marginLeft?: string;
+  login?: string;
+  email?: string;
+  password?: string;
+};
+
+export const Selection = ({
+  onValueChange,
+  name,
+  placeholderSelection,
+  value = "",
+  width,
+  bgColor,
+  textColor,
+  borderColor,
+  margin,
+  marginTop,
+  marginRight,
+  marginBottom,
+  marginLeft,
+}: selectProps) => {
+  return (
+    <div>
+      <select 
+        onChange={(e) => onValueChange(e.target.value)}
+        name={name}
+        placeholder={placeholderSelection}
+        value={value}
+        required
+        className={classNames(
+          `${borderColor}
+           ${bgColor}
+           ${textColor}
+           ${width}
+           ${margin}
+           ${marginTop}
+           ${marginRight}
+           ${marginBottom}
+           ${marginLeft}
+           font-Poppins py-2 px-4 rounded
+           shadow border-2 mb-3 appearance-none;
+           `
+        )}
+      >
+        <option className="appearance-none" disabled value={""} selected>
+          {placeholderSelection}
+        </option>
+        <option value="client" className="appearance-none bg-white">
+          Sou Cliente
+        </option>
+        <option value="restaurant" className="appearance-none">
+          Sou Empresa
+        </option>
+      </select>
+    </div>
+  );
+};
+
+export const Input = ({
   onValueChange,
   name,
   placeholder,
@@ -35,11 +106,10 @@ function Input({
   marginRight,
   marginBottom,
   marginLeft,
-}: Props) {
-  
+}: inputProps) => {
   return (
     <input
-    onChange={(e) =>onValueChange(e.target.value)}
+      onChange={(e) => onValueChange(e.target.value)}
       name={name}
       placeholder={placeholder}
       value={value}
@@ -63,6 +133,6 @@ function Input({
       )}
     />
   );
-}
+};
 
 export default Input;

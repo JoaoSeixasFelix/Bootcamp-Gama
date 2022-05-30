@@ -8,7 +8,7 @@ import Modal from "../components/ModalQr";
 
 const userHomePage = () => {
   return (
-    <div className="flex flex-col w-screen h-screen items-center justify-center mb-5">
+    <div className="flex flex-col w-full h-screen items-center justify-center mb-5">
       <div className="flex h-1/5 flex-col">
         <NavBar
           name="Joao Felix"
@@ -23,7 +23,7 @@ const userHomePage = () => {
 
       <div className="flex flex-col overflow-y-scroll mb-6 w-screen h-4/5">
         <span className=" mt-3 ml-9 font-Poppins">Restaurantes</span>
-        <div className="w-screen mt-2">
+        <div className="mt-2">
           <RestaurantDescription
             picture={Feijao}
             restaurantName={"Feijâo"}
