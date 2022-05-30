@@ -39,58 +39,6 @@ type selectProps = {
   password?: string;
 };
 
-export const Selection = ({
-  onValueChange,
-  name,
-  placeholderSelection,
-  value = "",
-  width,
-  bgColor,
-  textColor,
-  borderColor,
-  margin,
-  marginTop,
-  marginRight,
-  marginBottom,
-  marginLeft,
-}: selectProps) => {
-  return (
-    <div>
-      <select 
-        onChange={(e) => onValueChange(e.target.value)}
-        name={name}
-        placeholder={placeholderSelection}
-        value={value}
-        required
-        className={classNames(
-          `${borderColor}
-           ${bgColor}
-           ${textColor}
-           ${width}
-           ${margin}
-           ${marginTop}
-           ${marginRight}
-           ${marginBottom}
-           ${marginLeft}
-           font-Poppins py-2 px-4 rounded
-           shadow border-2 mb-3 appearance-none;
-           `
-        )}
-      >
-        <option className="appearance-none" disabled value={""} selected>
-          {placeholderSelection}
-        </option>
-        <option value="client" className="appearance-none bg-white">
-          Sou Cliente
-        </option>
-        <option value="restaurant" className="appearance-none">
-          Sou Empresa
-        </option>
-      </select>
-    </div>
-  );
-};
-
 export const Input = ({
   onValueChange,
   name,
@@ -124,14 +72,64 @@ export const Input = ({
          ${marginRight}
          ${marginBottom}
          ${marginLeft}
-         font-bold py-2 px-4 rounded 
+         font-bold py-3 px-5 rounded text-xs
          shadow appearance-none border-2 
-         text-gray-700
-         mb-3
-         leading-tight
-         focus:outline-nonefirst-letter:focus:shadow-outline`
+         mb-3 leading-tight focus:outline-nonefirst-letter:focus:shadow-outline`
       )}
     />
+  );
+};
+
+
+export const Selection = ({
+  onValueChange,
+  name,
+  placeholderSelection,
+  value = "",
+  width,
+  bgColor,
+  textColor,
+  borderColor,
+  margin,
+  marginTop,
+  marginRight,
+  marginBottom,
+  marginLeft,
+}: selectProps) => {
+  return (
+    <div>
+      <select
+        onChange={(e) => onValueChange(e.target.value)}
+        name={name}
+        placeholder={placeholderSelection}
+        value={value}
+        required
+        className={classNames(
+          `${borderColor}
+           ${bgColor}
+           ${textColor}
+           ${width}
+           ${margin}
+           ${marginTop}
+           ${marginRight}
+           ${marginBottom}
+           ${marginLeft}
+           font-Poppins py-2 px-4 rounded text-xs
+           shadow border-2 mb-3 appearance-none ${(value)?("text-black"):("text-gray-400")}
+           `
+        )}
+      >
+        <option className="appearance-none" disabled value={""} selected>
+          {placeholderSelection}
+        </option>
+        <option value="client" className="appearance-none">
+          Sou Cliente
+        </option>
+        <option value="restaurant" className="appearance-none">
+          Sou Empresa
+        </option>
+      </select>
+    </div>
   );
 };
 

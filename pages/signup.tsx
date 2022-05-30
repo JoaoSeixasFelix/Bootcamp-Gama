@@ -96,7 +96,7 @@ const SignUp = () => {
           borderColor="border-green-300"
           width="w-80"
           bgColor="bg-white"
-          textColor="text-gray-700"
+          textColor="text-gray-400"
           marginBottom="mb-7"
         />
 
@@ -109,7 +109,7 @@ const SignUp = () => {
           borderColor="border-green-300"
           size="w-full"
           bgColor="white"
-          textColor="white"
+          textColor="black"
           marginBottom="mb-7"
         />
 

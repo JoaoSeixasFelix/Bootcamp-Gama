@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import Link from "next/link";
-import UserModal from "./UserModal";
+import UserModal from "./DropdonwUser";
 
 export default function NavBar(username) {
   return (
@@ -10,8 +10,7 @@ export default function NavBar(username) {
           <div className=" user-picture ml-5 flex mt-3 mb-3 items-center w-10 h-10 rounded-full bg-white" />
 
           <div
-            className={`flex justify-between items-center ml-5 mr-8 mb-5 text-white`}
-          >
+            className={`flex justify-between items-center ml-5 mr-8 mb-5 text-white`}>
             <p className="font-Poppins"> Olá, {username.name} </p>
             <UserModal />
           </div>
