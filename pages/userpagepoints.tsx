@@ -1,11 +1,7 @@
 import NavBar from "../components/NavBar";
-import RestaurantDescription from "../components/MaterialUI/MenuList";
-import Feijao from "../public/PadariaeRestauranteDiamantina.svg";
-import BencaBecoi from "../public/BençaBençoi.svg";
-import Nine from "../public/RestauranteNine.svg";
-import FavIcon from "../public/FavIcon.svg";
+import { ScreenPoints } from "../components/MaterialUI/MenuList";
+import Promotion from "../public/promotion-sneakers.svg";
 import Modal from "../components/MaterialUI/ModalQr";
-import Disclousure from "../components/MaterialUI/Disclosure";
 
 const userPagePoints = () => {
   return (
@@ -22,38 +18,11 @@ const userPagePoints = () => {
       </div>
       <div className="w-screen overflow-auto h-3/4 mb-6 mt-3">
         <div className="font-Roboto">
-          <div>
-            <RestaurantDescription
-              picture={Feijao}
-              promotion={"A cada 5 almoços, ganhe um Snickers!"}
-              points={"3/6 Pontos"}
-              restaurantName={"Restaurante Sabor Mineiro"}
-            />
-          </div>
-          <RestaurantDescription
-            picture={BencaBecoi}
-            restaurantName={"Nine"}
-            points={"5 Pontos"}
-            promotion={"Vencimento: 15/06/2022"}
-          />
-          <RestaurantDescription
-            picture={Nine}
-            restaurantName={"Nine"}
-            points={"20 Pontos"}
-            promotion={"Vencimento: 30/06/2022"}
-          />
-          <RestaurantDescription
-            picture={Nine}
-            restaurantName={"Nine"}
-            points={"Prato Executivo"}
-            promotion={"Centro"}
-          />
-          <RestaurantDescription
-            picture={Nine}
-            restaurantName={"Nine"}
-            points={"Prato Executivo"}
-            promotion={"Centro"}
-          />
+         <ScreenPoints
+         picture={Promotion}
+         promotion={"A cada 5 almoços, ganhe um Snickers!"}
+         points={"3/6 Pontos"}
+         restaurantName={"Restaurante Sabor Mineiro"}/>
         </div>
       </div>
     </div>

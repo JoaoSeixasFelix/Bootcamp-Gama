@@ -7,57 +7,69 @@ type Props = {
   points?: string;
   picture?: string | object | any;
   restaurantName?: string;
-  plateModel?: string;
+  contact?: string;
   localization?: string;
   validate?: string;
   favIcon?: string | object | any;
   promotion?: string;
 };
 
-export const restaurantDescription = (item: Props) => {
-  const list = item.points ? "" : "list-item";
+type ScreenPointsProps = {
+  item?: string;
+  points?: string;
+  picture?: string | object | any;
+  restaurantName?: string;
+  contact?: string;
+  localization?: string;
+  validate?: string;
+  promotion?: string;
+};
 
+export const restaurantDescription = (item: Props) => {
   return (
     <div className="flex justify-center items-center mb-6">
       <div className="flex flex-col border-solid border-2 border-gray-200 rounded-xl items-center">
         <Image src={item.picture} />
+        <div className={"restaurant-description w-full flex justify-between"}>
+          <div className="dish-description mt-2 ml-4">
+            <p className="">{item.restaurantName}</p>
+            <li className={"model-plate ml-2 text-zinc-500 text-xs"}>
+              {item.contact}
+            </li>
+            <li className="ml-2 text-zinc-500 text-xs">{item.localization}</li>
+          </div>
+          <div className={"dish-description flex justify-center mr-4"}>
+            <Image src={item.favIcon} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const ScreenPoints = (propsPoints: ScreenPointsProps) => {
+  return (
+    <div className="flex justify-center items-center mb-6">
+      <div className="flex flex-col border-solid border-2 border-gray-200 rounded-xl items-center">
+        <Image src={propsPoints.picture} />
 
         <div
-          className={className(
-            `restaurant-description flex ${
-              item.points ? "flex-col-reverse" : ""
-            } justify-between h-full w-72`
-          )}
+          className={
+            "restaurant-description flex justify-between h-full w-full"
+          }
         >
-          {item.points ? (
-            <div className="flex justify-end">
-              <Disclousure />
-            </div>
-          ) : (
-            ""
-          )}
-
-          <div className="dish-description w-screen mt-2 justify-center items-start">
-            <p className={`model-plate text-base text-gray-700 `}>
-              {item.promotion}
+          <div className="dish-description w-full mt-2 ml-2 justify-center">
+            <p className={"model-plate text-base text-gray-700"}>
+              {propsPoints.promotion}
             </p>
-            <p className="">{item.restaurantName}</p>
 
             <p className="user-points text-sm text-emerald-400">
-              {item.points}
+              {propsPoints.points}
             </p>
-
-            <p className={`model-plate ${list} ml-4 text-zinc-500 text-xs`}>
-              {item.plateModel}
-            </p>
-
-            <p className="ml-0 text-zinc-500 text-xs">{item.localization}</p>
-
-            <p className="font-light">{item.validate}</p>
-          </div>
-
-          <div className={"dish-description mt-6 justify-center items-center"}>
-            {item.points ? "" : <Image src={item.favIcon} />}
+            <div className="flex flex-col text-sm">
+            <span className="w-11/12 font-Roboto mr-2 text-sm text-gray-600">{propsPoints.restaurantName}</span>
+            <Disclousure/>
+            </div>
           </div>
         </div>
       </div>

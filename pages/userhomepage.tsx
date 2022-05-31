@@ -29,40 +29,39 @@ const userHomePage = () => {
       </div>
 
       <div className="flex flex-col overflow-y-scroll mb-6 w-screen h-3/4">
-        <span className=" mt-1 ml-4 font-Poppins">Restaurantes</span>
         <div className="mt-2">
           <RestaurantDescription
             picture={Feijao}
             restaurantName={"Feijâo"}
-            plateModel={"Self - Service"}
+            contact={"Self - Service"}
             localization={"Centro"}
             favIcon={FavIcon}
           />
           <RestaurantDescription
             picture={BencaBecoi}
             restaurantName={"Bença Bençoi"}
-            plateModel={"Self - Service"}
+            contact={"Self - Service"}
             localization={"Centro"}
             favIcon={FavIcon}
           />
           <RestaurantDescription
             picture={Nine}
             restaurantName={"Nine"}
-            plateModel={"Prato Executivo"}
+            contact={"Prato Executivo"}
             localization={"Centro"}
             favIcon={FavIcon}
           />
           <RestaurantDescription
             picture={Nine}
             restaurantName={"Nine"}
-            plateModel={"Prato Executivo"}
+            contact={"Prato Executivo"}
             localization={"Centro"}
             favIcon={FavIcon}
           />
           <RestaurantDescription
             picture={Nine}
             restaurantName={"Nine"}
-            plateModel={"Prato Executivo"}
+            contact={"Prato Executivo"}
             localization={"Centro"}
             favIcon={FavIcon}
           />

@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/userhomepage": [
+    "/userfavorites": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/userhomepage.js"
+      "static/chunks/pages/userfavorites.js"
     ],
     "/userpagepoints": [
       "static/chunks/webpack.js",

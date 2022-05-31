@@ -24,35 +24,35 @@ const userFavorites = () => {
           <RestaurantDescription
             picture={Feijao}
             restaurantName={"Feijâo"}
-            plateModel={"Self - Service"}
+            contact={"(31) 3333-3333"}
             localization={"Centro"}
             favIcon={FavIcon}
           />
           <RestaurantDescription
             picture={BencaBecoi}
             restaurantName={"Bença Bençoi"}
-            plateModel={"Self - Service"}
+            contact={"(31) 3333-3333"}
             localization={"Centro"}
             favIcon={FavIcon}
           />
           <RestaurantDescription
             picture={Nine}
             restaurantName={"Nine"}
-            plateModel={"Prato Executivo"}
+            contact={"(31) 3333-3333"}
             localization={"Centro"}
             favIcon={FavIcon}
           />
           <RestaurantDescription
             picture={Nine}
             restaurantName={"Nine"}
-            plateModel={"Prato Executivo"}
+            contact={"(31) 3333-3333"}
             localization={"Centro"}
             favIcon={FavIcon}
           />
           <RestaurantDescription
             picture={Nine}
             restaurantName={"Nine"}
-            plateModel={"Prato Executivo"}
+            contact={"(31) 3333-3333"}
             localization={"Centro"}
             favIcon={FavIcon}
           />
