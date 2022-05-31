@@ -7,7 +7,7 @@ export default function NavBar(username) {
     <div className="flex flex-col">
       <nav className="flex flex-col ">
         <div className="bg-green-500 ">
-          <div className=" user-picture ml-5 flex mt-3 mb-3 items-center w-12 h-10 rounded-full bg-white">
+          <div className=" user-picture ml-5 flex mt-6 mb-3 items-center w-12 h-10 rounded-full bg-white">
             <img
               src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
               className="rounded-full w-32 shadow-lg"

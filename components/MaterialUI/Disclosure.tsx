@@ -8,21 +8,39 @@ export default function Disclousure() {
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className=" rounded-lg hover:bg-green-300 focus:outline-none focus-visible:ring focus-visible:ring-green-300 focus-visible:ring-opacity-75">
+              <Disclosure.Button className=" rounded-lg hover:bg-green-300 focus:outline-none focus-visible:ring focus-visible:ring-green-300 ">
                 <ChevronUpIcon
                   className={`${
                     open ? "rotate-360 transform" : "rotate-180 transform"
-                  } h-5  bg-transparent`}
+                  } h-5 bg-transparent`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="flex font-Poppins flex-col justify-start mr-56 text-sm text-gray-500">
-               <p>Almoco</p>
-               <p>Almoco</p>
-               <p>Almoco</p>
-               <p>Almoco</p>
-               <p>Almoco</p>
-               <p>Almoco</p>
-               
+              <Disclosure.Panel className="flex font-Poppins flex-col justify-start mr-40 mt-3 text-sm text-gray-500">
+                <div className="mt-4 flex items-center">
+                  <div className=" flex justify-center w-5 h-5 mr-3 bg-green-500 rounded-full">1</div>
+                  <p className="">Almoço</p>
+                </div>
+                <div className="mt-4 flex items-center">
+                  <div className=" flex justify-center w-5 h-5 mr-3 bg-green-500 rounded-full">2</div>
+                  <p className="">Almoço</p>
+                </div>
+                <div className="mt-4 flex items-center">
+                  <div className=" flex justify-center w-5 h-5 mr-3 bg-green-500 rounded-full">3 </div>
+                  <p className="">Almoço</p>
+                </div>
+                <div className="mt-4 flex items-center">
+                  <div className=" flex justify-center items-center border-2 w-5 h-5 mr-3  rounded-full">4</div>
+                  <p className="">Almoço</p>
+                </div>
+                <div className="mt-4 flex items-center">
+                  <div className=" flex justify-center items-center border-2 w-5 h-5 mr-3 rounded-full">5</div>
+                  <p className="">Almoço</p>
+                </div>
+                <div className="mt-4 flex items-center">
+                  <div className=" flex justify-center items-center border-2 w-5 h-5 mr-3 rounded-full">6</div>
+                  <p className="">Sneakers Grátis!</p>
+                </div>
+                
               </Disclosure.Panel>
             </>
           )}
