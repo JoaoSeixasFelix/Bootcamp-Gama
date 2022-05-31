@@ -1,10 +1,11 @@
 import NavBar from "../components/NavBar";
-import RestaurantDescription from "../components/MenuList";
+import RestaurantDescription from "../components/MaterialUI/MenuList";
 import Feijao from "../public/PadariaeRestauranteDiamantina.svg";
 import BencaBecoi from "../public/BençaBençoi.svg";
 import Nine from "../public/RestauranteNine.svg";
 import FavIcon from "../public/FavIcon.svg";
-import Modal from "../components/ModalQr";
+import Modal from "../components/MaterialUI/ModalQr";
+import Disclousure from "../components/MaterialUI/Disclosure";
 
 const userPagePoints = () => {
   return (
@@ -21,40 +22,37 @@ const userPagePoints = () => {
       </div>
       <div className="w-screen overflow-auto h-3/4 mb-6 mt-3">
         <div className="font-Roboto">
-          <RestaurantDescription
-            picture={Feijao}
-            restaurantName={"Feijâo"}
-            points={"10 Pontos"}
-            validate={"Vencimento: 10/06/2022"}
-            favIcon={FavIcon}
-          />
+          <div>
+            <RestaurantDescription
+              picture={Feijao}
+              promotion={"A cada 5 almoços, ganhe um Snickers!"}
+              points={"3/6 Pontos"}
+              restaurantName={"Restaurante Sabor Mineiro"}
+            />
+          </div>
           <RestaurantDescription
             picture={BencaBecoi}
             restaurantName={"Nine"}
             points={"5 Pontos"}
-            validate={"Vencimento: 15/06/2022"}
-            favIcon={FavIcon}
+            promotion={"Vencimento: 15/06/2022"}
           />
           <RestaurantDescription
             picture={Nine}
             restaurantName={"Nine"}
             points={"20 Pontos"}
-            validate={"Vencimento: 30/06/2022"}
-            favIcon={FavIcon}
+            promotion={"Vencimento: 30/06/2022"}
           />
           <RestaurantDescription
             picture={Nine}
             restaurantName={"Nine"}
             points={"Prato Executivo"}
-            validate={"Centro"}
-            favIcon={FavIcon}
+            promotion={"Centro"}
           />
           <RestaurantDescription
             picture={Nine}
             restaurantName={"Nine"}
             points={"Prato Executivo"}
-            validate={"Centro"}
-            favIcon={FavIcon}
+            promotion={"Centro"}
           />
         </div>
       </div>

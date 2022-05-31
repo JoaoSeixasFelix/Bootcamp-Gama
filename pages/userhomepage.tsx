@@ -1,10 +1,10 @@
 import NavBar from "../components/NavBar";
-import RestaurantDescription from "../components/MenuList";
+import RestaurantDescription from "../components/MaterialUI/MenuList";
 import Feijao from "../public/PadariaeRestauranteDiamantina.svg";
 import BencaBecoi from "../public/BençaBençoi.svg";
 import Nine from "../public/RestauranteNine.svg";
 import FavIcon from "../public/FavIcon.svg";
-import Modal from "../components/ModalQr";
+import Modal from "../components/MaterialUI/ModalQr";
 import { api } from "../services/api";
 import React, { useEffect, useState } from "react";
 

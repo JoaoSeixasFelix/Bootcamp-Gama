@@ -1,6 +1,6 @@
-import Input from "../components/Input";
+import Input from "../components/MaterialUI/Input";
 import { useState, useCallback, FormEvent } from "react";
-import Button from "../components/Button";
+import Button from "../components/MaterialUI/Button";
 import Description from "../components/Description";
 import Logo from "../components/Logo";
 import SocialMediaLogin from "../components/SocialMediaIcons";
