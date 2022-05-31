@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import Link from "next/link";
-import UserModal from "./DropdonwUser";
+import UserModal from "../components/MaterialUI/DropdonwUser";
 
 export default function NavBar(username) {
   return (

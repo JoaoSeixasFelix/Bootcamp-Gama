@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Selection } from "../components/Input";
+import Disclousure from "../components/MaterialUI/Disclosure";
+import { Selection } from "../components/MaterialUI/Input";
 
 const Home = () => {
   const [signUpTypeClient, setSignUpTypeClient] = useState("");
@@ -10,17 +11,7 @@ const Home = () => {
   
   return (
     <div>
- <Selection
-          onValueChange={onChangeSelection}
-          name="typeOfClient"
-          placeholderSelection="Tipo de Cliente"
-          value={signUpTypeClient}
-          borderColor="border-green-300"
-          width="w-80"
-          bgColor="white"
-          textColor="white"
-          marginBottom="mb-7"/>
-     
+ <Disclousure/>
     </div>
   );
 };

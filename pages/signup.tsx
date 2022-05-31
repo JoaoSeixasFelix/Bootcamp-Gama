@@ -1,7 +1,7 @@
-import Input, { Selection } from "../components/Input";
+import Input, { Selection } from "../components/MaterialUI/Input";
 import { useState, useCallback, FormEvent } from "react";
 import { api } from "../services/api";
-import Button from "../components/Button";
+import Button from "../components/MaterialUI/Button";
 import Logo from "../components/Logo";
 import axios from "axios";
 
