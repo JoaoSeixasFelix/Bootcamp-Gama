@@ -16,7 +16,7 @@ const userFavorites = () => {
           colorFav="border-black"
         />
       </div>
-      <div className="fixed right-0 bottom-0 z-20">
+      <div className="fixed left-0 bottom-0 z-20">
         <Modal />
       </div>
       <div className="flex flex-col overflow-y-scroll mb-6 mt-3 w-screen h-3/4">

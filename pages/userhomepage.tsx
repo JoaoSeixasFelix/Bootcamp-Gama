@@ -23,7 +23,7 @@ const userHomePage = () => {
       <div className="flex h-1/4 flex-col">
         <NavBar name={users} activeHome="border-b-2" colorHome="border-black" />
 
-        <div className="fixed right-0 bottom-0 z-20">
+        <div className="fixed left-0 bottom-0 z-20">
           <Modal />
         </div>
       </div>
