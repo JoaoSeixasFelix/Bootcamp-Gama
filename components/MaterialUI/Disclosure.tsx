@@ -4,7 +4,7 @@ import { ChevronUpIcon } from "@heroicons/react/solid";
 export default function Disclousure() {
   return (
     <div className="">
-      <div className="flex items-end w-72 flex-col-reverse rounded-2xl bg-white mb-2">
+      <div className="flex items-end flex-col-reverse rounded-2xl bg-white mb-2">
         <Disclosure>
           {({ open }) => (
             <>
@@ -15,7 +15,7 @@ export default function Disclousure() {
                   } h-5  bg-transparent`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="flex flex-col justify-start mr-56 text-sm text-gray-500">
+              <Disclosure.Panel className="flex font-Poppins flex-col justify-start mr-56 text-sm text-gray-500">
                <p>Almoco</p>
                <p>Almoco</p>
                <p>Almoco</p>
