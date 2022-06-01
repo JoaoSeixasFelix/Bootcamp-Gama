@@ -8,6 +8,7 @@ Study application developed to learn technologies and fix web concepts.
     - [TypeScript](https://www.typescriptlang.org/)
     - [Next.js](https://nextjs.org/learn/excel/typescript)
     - [Axios](https://axios-http.com)
+    - [auth0](https://auth0.com/docs/)
      - [Tailwind CSS](https://tailwindcss.com/)
       -  [Headlessui](https://headlessui.dev/react/listbox)
 
@@ -31,5 +32,6 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
     - Here we gained a lot of new knowledge, such as:
     - How to better structure and separate application folders in nextjs
     - How to consume an API using Axios;
+    - How to use a token through JWT (Json Web Token) for authentication and social validation.
     - Separation of business rules to be managed by contexts
     - A little more about responsive design and CSS.
