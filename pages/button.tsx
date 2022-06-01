@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Disclousure from "../components/MaterialUI/Disclosure";
-import { Selection } from "../components/MaterialUI/Input";
+import Disclousure from "../components/ComponentsGenerics/Disclosure";
+import { Selection } from "../components/ComponentsGenerics/Input";
 
 const Home = () => {
   const [signUpTypeClient, setSignUpTypeClient] = useState("");

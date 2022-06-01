@@ -1,6 +1,6 @@
-import Input from "../components/MaterialUI/Input";
+import Input from "../components/ComponentsGenerics/Input";
 import { useState, useCallback, FormEvent } from "react";
-import Button from "../components/MaterialUI/Button";
+import Button from "../components/ComponentsGenerics/Button";
 import Description from "../components/Description";
 import Logo from "../components/Logo";
 import SocialMediaLogin from "../components/SocialMediaIcons";
@@ -32,17 +32,17 @@ const SignIN = () => {
   );
 
   return (
-    <div className=" text-center box-border flex flex-col items-center justify-center h-full w-screen">
-      <Logo />
-
-      <div className="flex mr-56 text-4xl text-zinc-500 font-Poppins">
-        <Description salutation="Olá!" />
+    <div className="overflow-hidden h-full w-screen flex flex-col items-center justify-center">
+      <div className="flex mr-48">
+        <Logo />
       </div>
-
       <form
-        className="flex flex-col items-center justify-start w-screen h-72 mt-8 mb-0"
+        className="flex flex-col items-center justify-center w-screen h-72 mt-6"
         onSubmit={(e) => handleSubmit(e)}
       >
+        <div className="flex mr-56 mb-8 text-4xl text-zinc-500 font-Poppins">
+          <Description salutation="Olá!" />
+        </div>
         <Input
           onValueChange={onChangeLogin}
           name="login"
@@ -76,8 +76,8 @@ const SignIN = () => {
           height="h-12"
           backGroundColor="bg-slate-900"
           textColor="text-white"
-          marginTop="mt-8"
-          marginBottom="mb-6"
+          marginTop="mt-4"
+          marginBottom="mb-4"
           padding="py-2 px-4"
         >
           {" "}
@@ -96,7 +96,7 @@ const SignIN = () => {
       </span>
 
       <Link href={"/signup"}>
-        <a className=" flex flex-col justify-center items-center w-screen mt-10">
+        <a className=" flex flex-col justify-center items-center w-screen mt-8">
           <Description forgotyourpassword="Entre para o Fid+" />
 
           <Button
@@ -108,7 +108,7 @@ const SignIN = () => {
             textColor="text-slate-900"
             border="border-2"
             borderColor="border-blue-900"
-            marginTop="mt-3.5"
+            marginTop="mt-4"
             marginBottom="mb-14"
             padding="py-2 px-4"
           >
