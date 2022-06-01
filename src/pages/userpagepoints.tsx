@@ -1,6 +1,6 @@
 import NavBar from "../components/NavBar";
 import { ScreenPoints } from "../components/ComponentsGenerics/MenuList";
-import Promotion from "../../public/promotion-sneakers.svg";
+import Promotion from "../../public/RestaurantPictures/promotion-sneakers.svg";
 import Modal from "../components/ComponentsGenerics/ModalQr";
 
 const userPagePoints = () => {

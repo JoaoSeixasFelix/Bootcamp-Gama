@@ -1,6 +1,6 @@
 import { Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
-import SideList from "../../../public/sidelist.svg";
+import SideList from "../../../public/Icons/sidelist.svg";
 import { Fragment } from "react";
 
 const sections = [
