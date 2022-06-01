@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import QrCodeScreen from "../QrCodeScreen";
-import QrIcon from "../../../public/qrcode.svg";
+import QrIcon from "../../../public/Icons/qrcode.svg";
 import Image from "next/image";
 import { useState } from "react";
 
