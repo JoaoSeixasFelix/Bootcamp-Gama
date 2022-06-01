@@ -1,11 +1,11 @@
 import NavBar from "../components/NavBar";
 import RestaurantDescription from "../components/ComponentsGenerics/MenuList";
-import Feijao from "../public/PadariaeRestauranteDiamantina.svg";
-import BencaBecoi from "../public/BençaBençoi.svg";
-import Nine from "../public/RestauranteNine.svg";
-import FavIcon from "../public/FavIcon.svg";
+import Feijao from "../../public/PadariaeRestauranteDiamantina.svg";
+import BencaBecoi from "../../public/BençaBençoi.svg";
+import Nine from "../../public/RestauranteNine.svg";
+import FavIcon from "../../public/FavIcon.svg";
 import Modal from "../components/ComponentsGenerics/ModalQr";
-import { api } from "../services/api";
+import { api } from "../../services/api";
 import React, { useEffect, useState } from "react";
 
 const userHomePage = () => {

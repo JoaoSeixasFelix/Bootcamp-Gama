@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Pictureline from "../public/Line 116.svg";
-import Google from "../public/google.svg";
-import Apple from "../public/apple.svg";
-import Facebook from "../public/facebook.svg";
+import Pictureline from "../../public/Line 116.svg";
+import Google from "../../public/google.svg";
+import Apple from "../../public/apple.svg";
+import Facebook from "../../public/facebook.svg";
 
 export default function SocialMediaLogin() {
   return (

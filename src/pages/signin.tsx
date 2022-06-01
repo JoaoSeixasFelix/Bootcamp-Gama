@@ -4,42 +4,28 @@ import Button from "../components/ComponentsGenerics/Button";
 import Description from "../components/Description";
 import Logo from "../components/Logo";
 import SocialMediaLogin from "../components/SocialMediaIcons";
-import { api } from "../services/api";
+import { api } from "../../services/api";
 import Link from "next/link";
-import { AuthContext } from "../contexts/AuthContext";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const SignIN = () => {
-  const { signIn, user } = useContext(AuthContext)
+  const { signIn, user } = useContext(AuthContext);
   const [nameInput, setNameInput] = useState("");
-  const onChangeLogin = (login: string) => {
-    setNameInput(login);
-    console.log(nameInput);
-  };
-  
-
-  console.log('Render')
-
-  const [passWordInput, setPassWordInput] = useState("");
-  const onChangePassword = (pass: string) => {
-    console.log(passWordInput);
-    setPassWordInput(pass);
-  };
+   const [passWordInput, setPassWordInput] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setNameInput('')
-    setPassWordInput('')
-    // try {
-    //   await signIn({
-    //     email: nameInput,
-    //     password: passWordInput
-    //   })
-    // }catch(err){
-    //   console.log(err)
-    // }
-    
-  }
-    
+    setNameInput("");
+    setPassWordInput("");
+    try {
+      await signIn({
+        email: nameInput,
+        password: passWordInput
+      })
+    }catch(err){
+      console.log(err)
+    }
+  };
 
   return (
     <div className="overflow-hidden h-full w-screen flex flex-col items-center justify-center">
@@ -67,7 +53,7 @@ const SignIN = () => {
         />
 
         <Input
-          onValueChange={onChangePassword}
+          onValueChange={(e) => setPassWordInput(e)}
           name="password"
           placeholder="Password"
           type={"password"}

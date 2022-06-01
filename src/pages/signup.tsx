@@ -1,6 +1,6 @@
 import Input, { Selection } from "../components/ComponentsGenerics/Input";
 import { useState, useCallback, FormEvent } from "react";
-import { api } from "../services/api";
+import { api } from "../../services/api";
 import Button from "../components/ComponentsGenerics/Button";
 import Logo from "../components/Logo";
 import axios from "axios";
