@@ -21,7 +21,7 @@ const userHomePage = () => {
   return (
     <div className="flex flex-col w-full h-screen items-center justify-center mb-5">
       <div className="flex h-1/4 flex-col">
-        <NavBar name={users} activeHome="border-b-2" colorHome="border-black" />
+        <NavBar name={users.name} activeHome="border-b-2" colorHome="border-black" />
 
         <div className="fixed left-0 bottom-0 z-20">
           <Modal />

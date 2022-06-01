@@ -1,18 +1,23 @@
 import Input from "../components/ComponentsGenerics/Input";
-import { useState, useCallback, FormEvent } from "react";
+import { useState, useCallback, FormEvent, useContext, useRef } from "react";
 import Button from "../components/ComponentsGenerics/Button";
 import Description from "../components/Description";
 import Logo from "../components/Logo";
 import SocialMediaLogin from "../components/SocialMediaIcons";
 import { api } from "../services/api";
 import Link from "next/link";
+import { AuthContext } from "../contexts/AuthContext";
 
 const SignIN = () => {
+  const { signIn, user } = useContext(AuthContext)
   const [nameInput, setNameInput] = useState("");
   const onChangeLogin = (login: string) => {
     setNameInput(login);
     console.log(nameInput);
   };
+  
+
+  console.log('Render')
 
   const [passWordInput, setPassWordInput] = useState("");
   const onChangePassword = (pass: string) => {
@@ -20,16 +25,21 @@ const SignIN = () => {
     setPassWordInput(pass);
   };
 
-  const handleSubmit = useCallback(
-    (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", {
-        name: nameInput,
-        password: passWordInput,
-      });
-    },
-    [nameInput, passWordInput]
-  );
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setNameInput('')
+    setPassWordInput('')
+    // try {
+    //   await signIn({
+    //     email: nameInput,
+    //     password: passWordInput
+    //   })
+    // }catch(err){
+    //   console.log(err)
+    // }
+    
+  }
+    
 
   return (
     <div className="overflow-hidden h-full w-screen flex flex-col items-center justify-center">
@@ -44,7 +54,7 @@ const SignIN = () => {
           <Description salutation="Olá!" />
         </div>
         <Input
-          onValueChange={onChangeLogin}
+          onValueChange={(e) => setNameInput(e)}
           name="login"
           placeholder="Username"
           value={nameInput}
