@@ -1,9 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/button": "pages/button.js",
-  "/userhomepage": "pages/userhomepage.js",
-  "/userfavorites": "pages/userfavorites.js",
-  "/userpagepoints": "pages/userpagepoints.js"
+  "/_document": "pages/_document.js"
 }
