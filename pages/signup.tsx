@@ -44,16 +44,16 @@ const SignUp = () => {
   );
 
   return (
-    <div className="Container flex flex-col items-center justify-center h-3/4  w-screen">
-      <Logo />
-
-      <div className="flex flex-col justify-start items-start w-52 mr-28 mb-7 text-3xl font-Poppins text-slate-900">
+    <div className="flex flex-col items-center justify-center h-screen w-screen">
+      <div className="flex mr-48 -mt-24 mb-4">
+        <Logo />
+      </div>
+      <div className="flex flex-col justify-start items-start w-52 mr-28 mb-14 mt-6 text-3xl font-Poppins text-slate-900">
         <span>Seja</span>
         <span>bem-vindo!</span>
       </div>
-
       <form
-        className="flex flex-col items-center justify-center h-2/4"
+        className="flex flex-col items-center justify-center h-72 mt-6"
         onSubmit={(e) => {
           handleSubmit(e);
         }}
