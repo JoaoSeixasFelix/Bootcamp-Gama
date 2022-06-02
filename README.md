@@ -12,6 +12,7 @@
     - [Axios](https://axios-http.com)
     - [auth0](https://auth0.com/docs/)
     - [nookies](https://github.com/maticzav/nookies)
+    - [uuid](https://github.com/uuidjs/uuid)
      - [Tailwind CSS](https://tailwindcss.com/)
       -  [Headlessui](https://headlessui.dev/react/listbox)
 
