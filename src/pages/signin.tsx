@@ -78,7 +78,7 @@ const SignIN = () => {
           Entrar{" "}
         </Button>
 
-        <Link href={"/"}>
+        <Link href={"/forgotpassword"}>
           <a>
             <Description forgotyourpassword="Esqueceu sua senha?" />
           </a>

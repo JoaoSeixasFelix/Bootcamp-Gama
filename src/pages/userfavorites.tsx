@@ -19,7 +19,7 @@ const userFavorites = () => {
       <div className="fixed left-0 bottom-0 z-20">
         <Modal />
       </div>
-      <div className="flex flex-col overflow-y-scroll mb-6 mt-3 w-screen h-4/5">
+      <div className="flex flex-col overflow-y-scroll mb-6 mt-4 w-screen h-4/5">
         <div className="">
           <RestaurantDescription
             picture={Feijao}

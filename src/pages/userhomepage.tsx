@@ -30,8 +30,8 @@ const userHomePage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col overflow-y-scroll mb-6 w-screen h-4/5">
-        <div className="mt-2">
+      <div className="mt-4 flex flex-col overflow-y-scroll mb-6 w-screen h-4/5">
+        <div className="`">
           <RestaurantDescription
             picture={RestaurantDonaAna}
             restaurantName={"Restaurante Dona Ana"}
