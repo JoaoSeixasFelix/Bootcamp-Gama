@@ -1,34 +1,15 @@
-import Input, { Selection } from "../components/ComponentsGenerics/Input";
 import { useState, useCallback, FormEvent } from "react";
+import axios from "axios";
+import Input, { Selection } from "../components/ComponentsGenerics/Input";
 import { api } from "../../services/api";
 import Button from "../components/ComponentsGenerics/Button";
 import Logo from "../components/Logo";
-import axios from "axios";
 
 const SignUp = () => {
   const [signUpNameInput, setSignUpNameInput] = useState("");
-  const onChangeLogin = (login: string) => {
-    console.log(signUpNameInput);
-    setSignUpNameInput(login);
-  };
-
-  const [signUpEmailInput, setSignUpEmailInput] = useState("");
-  const onChangeEmail = (email: string) => {
-    console.log(signUpEmailInput);
-    setSignUpEmailInput(email);
-  };
-
   const [signUpTypeClient, setSignUpTypeClient] = useState("");
-  const onChangeSelection = (typeCLient: string) => {
-    console.log(signUpTypeClient);
-    setSignUpTypeClient(typeCLient);
-  };
-
+  const [signUpEmailInput, setSignUpEmailInput] = useState("");
   const [signUpPassWordInput, setSignupPassWordInput] = useState("");
-  const onChangePassword = (pass: string) => {
-    console.log(signUpPassWordInput);
-    setSignupPassWordInput(pass);
-  };
 
   const handleSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
@@ -48,18 +29,18 @@ const SignUp = () => {
       <div className="flex mr-48 -mt-24 mb-4">
         <Logo />
       </div>
-      <div className="flex flex-col justify-start items-start w-52 mr-28 mb-14 mt-6 text-3xl font-Poppins text-slate-900">
-        <span>Seja</span>
-        <span>bem-vindo!</span>
-      </div>
       <form
         className="flex flex-col items-center justify-center h-72 mt-6"
         onSubmit={(e) => {
           handleSubmit(e);
         }}
       >
+        <div className="flex flex-col justify-start items-start w-52 mr-28 mb-14 mt-6 text-3xl font-Poppins text-slate-900">
+          <span>Seja</span>
+          <span>bem-vindo!</span>
+        </div>
         <Input
-          onValueChange={onChangeLogin}
+          onValueChange={(e) => setSignUpNameInput(e)}
           name="login"
           placeholder="Nome Completo"
           value={signUpNameInput}
@@ -73,7 +54,7 @@ const SignUp = () => {
         />
 
         <Selection
-          onValueChange={onChangeSelection}
+          onValueChange={(e) => setSignUpTypeClient(e)}
           name="typeOfClient"
           placeholderSelection="Tipo de Cliente"
           value={signUpTypeClient}
@@ -85,7 +66,7 @@ const SignUp = () => {
         />
 
         <Input
-          onValueChange={onChangeEmail}
+          onValueChange={(e) => setSignUpEmailInput(e)}
           name="signup-email"
           placeholder="E-mail"
           type={"email"}
@@ -99,7 +80,7 @@ const SignUp = () => {
         />
 
         <Input
-          onValueChange={onChangePassword}
+          onValueChange={(e) => setSignupPassWordInput(e)}
           name="password"
           placeholder="Password"
           type={"password"}

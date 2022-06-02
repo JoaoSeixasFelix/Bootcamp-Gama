@@ -9,7 +9,7 @@ import Modal from "../components/ComponentsGenerics/ModalQr";
 const userFavorites = () => {
   return (
     <div className="flex flex-col w-screen h-screen items-center justify-center mb-5">
-      <div className="flex flex-col h-1/4">
+      <div className="flex flex-col">
         <NavBar
           name="Joao Felix"
           activeFav="border-b-2"
@@ -19,32 +19,18 @@ const userFavorites = () => {
       <div className="fixed left-0 bottom-0 z-20">
         <Modal />
       </div>
-      <div className="flex flex-col overflow-y-scroll mb-6 mt-3 w-screen h-3/4">
+      <div className="flex flex-col overflow-y-scroll mb-6 mt-3 w-screen h-4/5">
         <div className="">
           <RestaurantDescription
             picture={Feijao}
-            restaurantName={"Feijâo"}
+            restaurantName={"Restaurante Dona Ana"}
             contact={"(31) 3333-3333"}
-            localization={"Centro"}
+            localization={"Rua Rio de Janeiro, 222"}
             favIcon={FavIcon}
           />
           <RestaurantDescription
             picture={BencaBecoi}
             restaurantName={"Bença Bençoi"}
-            contact={"(31) 3333-3333"}
-            localization={"Centro"}
-            favIcon={FavIcon}
-          />
-          <RestaurantDescription
-            picture={Nine}
-            restaurantName={"Nine"}
-            contact={"(31) 3333-3333"}
-            localization={"Centro"}
-            favIcon={FavIcon}
-          />
-          <RestaurantDescription
-            picture={Nine}
-            restaurantName={"Nine"}
             contact={"(31) 3333-3333"}
             localization={"Centro"}
             favIcon={FavIcon}

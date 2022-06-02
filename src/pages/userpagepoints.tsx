@@ -6,7 +6,7 @@ import Modal from "../components/ComponentsGenerics/ModalQr";
 const userPagePoints = () => {
   return (
     <div className="flex flex-col w-screen h-screen items-center justify-center">
-      <div className="flex flex-col h-1/4">
+      <div className="flex flex-col">
         <NavBar
           name="Joao Felix"
           activePoints="border-b-2"
