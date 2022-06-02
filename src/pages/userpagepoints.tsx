@@ -16,14 +16,13 @@ const userPagePoints = () => {
       <div className="fixed left-0 bottom-0 z-20">
         <Modal />
       </div>
-      <div className="w-screen overflow-auto h-4/5 mb-4 mt-3">
-        <div className="font-Roboto">
-         <ScreenPoints
-         picture={Promotion}
-         promotion={"A cada 5 almoços, ganhe um Snickers!"}
-         points={"3/6 Pontos"}
-         restaurantName={"Restaurante Sabor Mineiro"}/>
-        </div>
+      <div className="font-Roboto w-screen overflow-auto h-4/5 mb-6 mt-4">
+        <ScreenPoints
+          picture={Promotion}
+          promotion={"A cada 5 almoços, ganhe um Snickers!"}
+          points={"3/6 Pontos"}
+          restaurantName={"Restaurante Sabor Mineiro"}
+        />
       </div>
     </div>
   );
