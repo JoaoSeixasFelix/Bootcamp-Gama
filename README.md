@@ -1,6 +1,8 @@
-## Practical project carried out during the Bootcamp held by Gama Academy, aiming to create an MVP product.
-
-Study application developed to learn technologies and fix web concepts.
+## Bootcamp Gama Academy
+<br/>
+   Practical study application carried out during the Bootcamp held by Gama Academy, aiming to create an MVP product.
+<br/>
+<br/>
 
 ## Technologies Used In This Project
 
