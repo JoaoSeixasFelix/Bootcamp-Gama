@@ -1,7 +1,13 @@
-import axios from 'axios'
-import React from 'react'
+import axios from "axios";
+import React from "react";
+import { parseCookies } from "nookies";
+
+const { "nextauth.token": token } = parseCookies();
 
 export const api = axios.create({
-    baseURL:''
-})
+  baseURL: "",
+});
 
+if (token) {
+  api.defaults.headers["Authorization"] = `Bearer ${token}`;
+}

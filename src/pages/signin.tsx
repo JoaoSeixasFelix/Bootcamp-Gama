@@ -1,29 +1,27 @@
-import Input from "../components/ComponentsGenerics/Input";
 import { useState, useCallback, FormEvent, useContext, useRef } from "react";
+import Link from "next/link";
+import { AuthContext } from "../../contexts/AuthContext";
+import { api } from "../../services/api";
+import Input from "../components/ComponentsGenerics/Input";
 import Button from "../components/ComponentsGenerics/Button";
 import Description from "../components/Description";
 import Logo from "../components/Logo";
 import SocialMediaLogin from "../components/SocialMediaIcons";
-import { api } from "../../services/api";
-import Link from "next/link";
-import { AuthContext } from "../../contexts/AuthContext";
 
 const SignIN = () => {
   const { signIn, user } = useContext(AuthContext);
   const [nameInput, setNameInput] = useState("");
-   const [passWordInput, setPassWordInput] = useState("");
+  const [passWordInput, setPassWordInput] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setNameInput("");
-    setPassWordInput("");
     try {
       await signIn({
         email: nameInput,
-        password: passWordInput
-      })
-    }catch(err){
-      console.log(err)
+        password: passWordInput,
+      });
+    } catch (err) {
+      console.log(err);
     }
   };
 
