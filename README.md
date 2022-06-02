@@ -35,5 +35,6 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
     - How to consume an API using Axios;
     - How to use a token through JWT (Json Web Token) for authentication and social validation.
     - Separation of business rules to be managed by contexts.
-    - We learned how to use the data storage structure of cookies, through the use of the nookies library, to store data, if necessary, both on the             server side and on the browser.
+    - We learned how to use the data storage structure of cookies, through the use of the nookies library, 
+      to store data, if necessary, both on the server side and on the browser.
     - A little more about responsive design and CSS.
