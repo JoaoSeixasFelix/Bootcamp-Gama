@@ -10,7 +10,7 @@
     - [TypeScript](https://www.typescriptlang.org/)
     - [Next.js](https://nextjs.org/learn/excel/typescript)
     - [Axios](https://axios-http.com)
-    - [auth0](https://auth0.com/docs/)
+    - [jwt](https://jwt.io/)
     - [nookies](https://github.com/maticzav/nookies)
     - [uuid](https://github.com/uuidjs/uuid)
      - [Tailwind CSS](https://tailwindcss.com/)
