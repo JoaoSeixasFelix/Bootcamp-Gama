@@ -26,7 +26,7 @@ const SignUp = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen w-screen">
-      <div className="flex mr-48 -mt-24 mb-4">
+      <div className="flex mr-48 -mt-40 mb-28">
         <Logo />
       </div>
       <form
@@ -35,7 +35,7 @@ const SignUp = () => {
           handleSubmit(e);
         }}
       >
-        <div className="flex flex-col justify-start items-start w-52 mr-28 mb-14 mt-6 text-3xl font-Poppins text-slate-900">
+        <div className="flex flex-col justify-start items-start w-52 mr-28 mb-3 mt-6 text-3xl font-Poppins text-slate-900">
           <span>Seja</span>
           <span>bem-vindo!</span>
         </div>
@@ -100,7 +100,8 @@ const SignUp = () => {
           backGroundColor="bg-slate-900"
           textColor="text-white"
           borderColor="border-indigo-900"
-          marginBottom="mt-5"
+          marginBottom="mb-16"
+          marginTop="mt-5"
           padding="py-2 px-4"
         >
           {" "}
