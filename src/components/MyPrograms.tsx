@@ -1,6 +1,6 @@
+import ModalAddingCustomer from "./ComponentsGenerics/ModalAddingCustomer";
 import Description from "./Description";
 import TablePrograms from "./Table";
-import TableClients from "./TableClients";
 
 export const MyPrograms = () => {
   return (
@@ -19,14 +19,18 @@ export const MyPrograms = () => {
               />
             </div>
           </div>
-          <div className="flex w-1/2 justify-center items-center">
-            <button className="bg-orange-600 w-16 h-16 rounded-full">
-              asas
-            </button>
+          <div className="flex w-1/5 items-center justify-center">
+            <ModalAddingCustomer/>
           </div>
         </div>
         <div className="flex">
-          <TablePrograms Name="Nome" Status="Status" qantitiesOfCustomers="Clientes" start="Inicio"  icons="" />
+          <TablePrograms
+            Name="Nome"
+            Status="Status"
+            qantitiesOfCustomers="Clientes"
+            start="Inicio"
+            icons=""
+          />
         </div>
       </div>
     </div>
