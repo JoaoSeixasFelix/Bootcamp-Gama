@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Image from "next/image";
 import Sneakers from "../../public/IconsTable/Sneakers.svg";
 import IconDeleted from "./ComponentsGenerics/ButtonDeleted";
 import IconQrCode from "./ComponentsGenerics/ButtonQrCode";
+import List from "../../public/Icons/expand_more.svg";
 
 type PropsTable = {
   Name: string;
@@ -12,6 +14,9 @@ type PropsTable = {
 };
 
 export const TablePrograms = (props: PropsTable) => {
+
+  const [show, setShow] = useState(true);
+
   return (
     <div className="overflow-x-auto w-full shadow-md sm:rounded-lg">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -40,7 +45,7 @@ export const TablePrograms = (props: PropsTable) => {
               scope="row"
               className="px-6 py-4 font-medium text-gray-900 dark:text-white flex items-center"
             >
-              <Image src={Sneakers} />{" "}
+              <Image src={Sneakers} />
               <p className=" ml-4 font-Poppins text-2xl">
                 A cada 5 almoços, ganhe um Sneakers!
               </p>
@@ -48,7 +53,9 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="text-center items-center">Delete</td>
+            <td className="text-center items-center">
+              <Image src={List} style={{cursor: "pointer"}} />
+            </td>
             <td className="text-center items-center">
               <IconQrCode />
             </td>
@@ -70,7 +77,9 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="text-center items-center">Delete</td>
+            <td className="text-center items-center">
+              <Image src={List} style={{cursor: "pointer"}} />
+            </td>
             <td className="text-center items-center">
               <IconQrCode />
             </td>
@@ -91,7 +100,9 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="text-center items-center">Delete</td>
+            <td className="text-center items-center">
+              <Image src={List} style={{cursor: "pointer"}} />
+            </td>
             <td className="text-center items-center">
               <IconQrCode />
             </td>
@@ -112,7 +123,9 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="text-center items-center">Delete</td>
+            <td className="text-center items-center">
+              <Image src={List} style={{cursor: "pointer"}} />
+            </td>
             <td className="text-center items-center">
               <IconQrCode />
             </td>

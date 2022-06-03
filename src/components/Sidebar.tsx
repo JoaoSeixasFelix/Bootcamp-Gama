@@ -38,26 +38,26 @@ export const SideBar = () => {
       <div className="flex flex-col w-full h-3/5">
         <div className="w-full flex flex-col justify-start mt-10 h-3/5 font-Poppins text-lg">
           <div className="h 4/5">
-            <div className="My Programs flex ml-7 mb-14">
-              <Image src={MyPrograms} />
+            <div className="My Programs flex ml-7 mb-14 cursor-pointer">
+              <Image src={MyPrograms} style={{cursor: "pointer"}}/>
               <p className="ml-3 ">Meus Programas</p>
             </div>
-            <div className="Estatisticas flex ml-7 mb-14">
-              <Image src={Statics} />
+            <div className="Estatisticas flex ml-7 mb-14 cursor-pointer">
+              <Image src={Statics} style={{cursor: "pointer"}} />
               <p className="ml-3">Estastísticas</p>
             </div>
-            <div className="Clientes flex ml-7 mb-14">
-              <Image src={Clients} />
+            <div className="Clientes flex ml-7 mb-14 cursor-pointer">
+              <Image src={Clients} style={{cursor: "pointer"}} />
               <p className="ml-3">Clientes</p>
             </div>
-            <div className="Suporte flex ml-7 mb-14">
-              <Image src={HelpDesk} />
+            <div className="Suporte flex ml-7 mb-14 cursor-pointer">
+              <Image src={HelpDesk}  style={{cursor: "pointer"}}/>
               <p className="ml-3">Suporte</p>
             </div>
           </div>
           <div className="flex w-full h-full mt-28">
-            <div className="Logout flex h-full ml-7">
-              <Image src={LogOut} />
+            <div className="Logout flex h-full ml-7 cursor-pointer">
+              <Image src={LogOut} style={{cursor: "pointer"}}/>
               <p className="ml-3">Sair</p>
               </div>
           </div>

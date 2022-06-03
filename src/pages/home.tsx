@@ -3,10 +3,12 @@ import MyClients from "../components/MyClients";
 import MyPrograms from "../components/MyPrograms";
 import SideBar from "../components/Sidebar";
 import Statistics from "../components/Statistics";
+import HelpDesk from "../components/Suport";
 import TableClients from "../components/TableClients";
 
 export const HomePage = () => {
   const screens = [0, 1, 2, 3, 4];
+  // const newscreens = screens.map(())
 
   return (
     <div className=" flex flex-col w-full h-full">
@@ -21,8 +23,9 @@ export const HomePage = () => {
         </div>
         <div className="w-full">
           <MyPrograms />
-          {/* <MyClients/>
-          <Statistics/> */}
+          {/* <MyClients/> */}
+          {/* <Statistics/> */}
+          {/* <HelpDesk/> */}
         </div>
       </div>
     </div>
