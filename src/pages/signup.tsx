@@ -1,7 +1,7 @@
 import { useState, useCallback, FormEvent } from "react";
 import axios from "axios";
 import Input, { Selection } from "../components/ComponentsGenerics/Input";
-import { api } from "../../services/api";
+import { api } from "../services/api";
 import Button from "../components/ComponentsGenerics/Button";
 import Logo from "../components/Logo";
 
