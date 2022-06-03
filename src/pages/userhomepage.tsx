@@ -8,7 +8,7 @@ import BencaBecoi from "../../public/RestaurantPictures/BençaBençoi.svg";
 import RestaurantNine from "../../public/RestaurantPictures/RestaurantNine.svg";
 import FavIcon from "../../public/Icons/FavIcon.svg";
 import Modal from "../components/ComponentsGenerics/ModalQr";
-import { api } from "../../services/api";
+import { api } from "../services/api";
 
 const userHomePage = () => {
   const [users, setUsers] = useState([]);

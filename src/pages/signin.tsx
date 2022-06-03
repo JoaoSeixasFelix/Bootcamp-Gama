@@ -1,7 +1,7 @@
 import { useState, useCallback, FormEvent, useContext, useRef } from "react";
 import Link from "next/link";
-import { AuthContext } from "../../contexts/AuthContext";
-import { api } from "../../services/api";
+import { AuthContext } from "../contexts/AuthContext";
+import { api } from "../services/api";
 import Input from "../components/ComponentsGenerics/Input";
 import Button from "../components/ComponentsGenerics/Button";
 import Description from "../components/Description";
