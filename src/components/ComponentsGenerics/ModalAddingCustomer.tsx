@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import Button from "./Button";
 import Input from "./Input";
+import AddingCustomer from "../../../public/Icons/01.svg";
+import Image from "next/image";
 
 export default function ModalAddingCustomer() {
   const [showModal, setShowModal] = useState(false);
@@ -11,15 +13,15 @@ export default function ModalAddingCustomer() {
       <Button
         onClick={() => setShowModal(true)}
         type={"button"}
-        height="w-14"
-        width="w-14"
-        backGroundColor="bg-gray-300"
+        height="w-20"
+        width="w-20"
+        backGroundColor="transparent"
         textColor="text-slate-900"
         borderColor="transparent"
+        rounded="rounded-full"
         margin="m-0"
-        padding="p-0"
       >
-        +
+        <Image src={AddingCustomer} />
       </Button>
 
       {showModal ? (
@@ -30,11 +32,10 @@ export default function ModalAddingCustomer() {
                           items-center
                           flex
                           overflow-x-hidden 
-                          overflow-y-auto 
                           fixed inset-0 
-                          z-50 outline-none focus:outline-none"
+                          z-50 outline-none focus:outline-none overflow-y-hidden"
           >
-            <div className="w-4/5 h-5/6">
+            <div className=" mt-40 w-4/5 h-full">
               {/*content*/}
 
               <div className=" border-0 rounded-lg shadow-lg relative flex flex-col w-full h-4/5 bg-white outline-none focus:outline-none">
@@ -168,7 +169,7 @@ export default function ModalAddingCustomer() {
                     <div className=" font-Poppins text-lg flex justify-center items-center w-30 h-8 mr-5">
                       Retorno por cliente:
                     </div>
-                    <p className="w-20 border-b-2 mr-10"></p>
+                    <p className="w-20 border-b-2 mr-10">+R$0,00</p>
                   </div>
                 </div>
 
@@ -185,7 +186,7 @@ export default function ModalAddingCustomer() {
                                 font-bold uppercase
                                 text-sm px-6 py-3 rounded shadow
                                 hover:shadow-lg outline-none 
-                                focus:outline-none mr-1 mb-1 ease-linear
+                                focus:outline-none mr-5 mb-5 ease-linear
                                 transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}

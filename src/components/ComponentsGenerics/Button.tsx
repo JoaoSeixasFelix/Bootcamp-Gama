@@ -21,6 +21,7 @@ type Props = React.PropsWithChildren<{
   paddingBottom?: string;
   paddingRight?: string;
   paddingLeft?: string;
+  rounded?: string;
 }>;
 
 export const Button = ({
@@ -44,6 +45,7 @@ export const Button = ({
   paddingBottom,
   paddingRight,
   paddingLeft,
+  rounded,
 }: Props) => {
   return (
     <>
@@ -67,6 +69,7 @@ export const Button = ({
            ${paddingBottom}
            ${paddingRight}
            ${paddingLeft}
+           ${rounded}
            font-bold
            rounded-lg font-Poppins`
         )}

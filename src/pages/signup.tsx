@@ -30,7 +30,7 @@ const SignUp = () => {
         <Logo />
       </div>
       <form
-        className="flex flex-col items-center justify-center h-72 mt-6"
+        className="flex flex-col  items-center justify-center h-72 mt-6"
         onSubmit={(e) => {
           handleSubmit(e);
         }}
@@ -103,6 +103,7 @@ const SignUp = () => {
           marginBottom="mb-16"
           marginTop="mt-5"
           padding="py-2 px-4"
+          rounded="rounded-lg"
         >
           {" "}
           Cadastre-se!{" "}

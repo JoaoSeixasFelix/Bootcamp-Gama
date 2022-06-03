@@ -9,19 +9,21 @@ export const HomePage = () => {
   const screens = [0, 1, 2, 3, 4];
 
   return (
-    <div className="h-full w-screen flex flex-col">
-      <div className="flex h-16 w-screen bg-green-400">
+    <div className=" flex flex-col w-full h-full">
+      
+      <div className=" Header flex h-14 w-full bg-green-400">
         <p>asas</p>
       </div>
-      <div className="h-full w-full flex">
-        <div className="">
+
+      <div className="flex h-5/6 w-full">
+        <div className="flex flex-col h-full">
           <SideBar />
         </div>
         <div className="w-full">
-            <MyPrograms/>
-            {/* <MyClients/> */}
-            {/* <Statistics/> */}
-            </div>
+          <MyPrograms />
+          {/* <MyClients/>
+          <Statistics/> */}
+        </div>
       </div>
     </div>
   );
