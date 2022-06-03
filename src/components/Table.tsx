@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Sneakers from "../../public/IconsTable/Sneakers.svg";
-import Disclousure from "./ComponentsGenerics/Disclosure";
-import QrCode from "../../public/Icons/qr_code_2.svg";
-import Delete from "../../public/Icons/delete.svg";
-import { type } from "os";
+import IconDeleted from "./ComponentsGenerics/ButtonDeleted";
+import IconQrCode from "./ComponentsGenerics/ButtonQrCode";
 
 type PropsTable = {
   Name: string;
@@ -31,9 +29,9 @@ export const TablePrograms = (props: PropsTable) => {
             <th scope="col" className="px-6 py-3">
               {props.start}
             </th>
-            <th scope="col" className="flex justify-center px-6 py-3">
-              {props.icons}
-            </th>
+            <th scope="col" className="px-6 py-3"></th>
+            <th scope="col" className="px-6 py-3"></th>
+            <th scope="col" className="px-6 py-3"></th>
           </tr>
         </thead>
         <tbody>
@@ -50,10 +48,34 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="px-6 py-4 text-right">
-              Delete
-              <Image src={QrCode} />
-              <Image src={Delete} />
+            <td className="text-center items-center">Delete</td>
+            <td className="text-center items-center">
+              <IconQrCode />
+            </td>
+            <td className="text-center items-center">
+              <IconDeleted />
+            </td>
+          </tr>
+
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <th
+              scope="row"
+              className="px-6 py-4 font-medium text-gray-900 dark:text-white flex items-center"
+            >
+              <Image src={Sneakers} />{" "}
+              <p className=" ml-4 font-Poppins text-2xl">
+                A cada 5 almoços, ganhe um Sneakers!
+              </p>
+            </th>
+            <td className="px-6 py-4">Aberto</td>
+            <td className="px-6 py-4">25</td>
+            <td className="px-6 py-4">16/04/2022</td>
+            <td className="text-center items-center">Delete</td>
+            <td className="text-center items-center">
+              <IconQrCode />
+            </td>
+            <td className="text-center items-center">
+              <IconDeleted />
             </td>
           </tr>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -69,10 +91,12 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="px-6 py-4 text-right">
-              Delete
-              <Image src={QrCode} />
-              <Image src={Delete} />
+            <td className="text-center items-center">Delete</td>
+            <td className="text-center items-center">
+              <IconQrCode />
+            </td>
+            <td className="text-center items-center">
+              <IconDeleted />
             </td>
           </tr>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -88,50 +112,12 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="h-full px-6 py-4 text-right">
-              Delete
-              <Image src={QrCode} />
-              <Image src={Delete} />
+            <td className="text-center items-center">Delete</td>
+            <td className="text-center items-center">
+              <IconQrCode />
             </td>
-          </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-            <th
-              scope="row"
-              className="px-6 py-4 font-medium text-gray-900 dark:text-white flex items-center"
-            >
-              <Image src={Sneakers} />{" "}
-              <p className=" ml-4 font-Poppins text-2xl">
-                A cada 5 almoços, ganhe um Sneakers!
-              </p>
-            </th>
-            <td className="px-6 py-4">Aberto</td>
-            <td className="px-6 py-4">25</td>
-            <td className="px-6 py-4">16/04/2022</td>
-            <td className="px-6 py-4 text-right">
-              <button>
-                <Disclousure />
-              </button>
-              <Image src={QrCode} className="px-" />
-              <Image src={Delete} />
-            </td>
-          </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-            <th
-              scope="row"
-              className="px-6 py-4 font-medium text-gray-900 dark:text-white flex items-center"
-            >
-              <Image src={Sneakers} />{" "}
-              <p className=" ml-4 font-Poppins text-2xl">
-                A cada 5 almoços, ganhe um Sneakers!
-              </p>
-            </th>
-            <td className="px-6 py-4">Aberto</td>
-            <td className="px-6 py-4">25</td>
-            <td className="px-6 py-4">16/04/2022</td>
-            <td className="px-6 py-4 text-right">
-              Delete
-              <Image src={QrCode} />
-              <Image src={Delete} />
+            <td className="text-center items-center">
+              <IconDeleted />
             </td>
           </tr>
         </tbody>
