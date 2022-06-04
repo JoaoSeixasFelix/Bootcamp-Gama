@@ -5,10 +5,16 @@ import Statistics from "../components/Statistics";
 import HelpDesk from "../components/Suport";
 import LogoDesktop from "../../public/Logo/LogoFigPlus.svg";
 import Image from "next/image";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 export const HomePage = () => {
+
+  const {} = useContext(AuthContext)
+
+
   return (
-    <div className=" overflow-y-hidden flex flex-col w-full h-full">
+    <div className=" overflow-y-hidden block flex-col w-full h-full">
       <div className=" Header flex justify-center h-16 w-full items-center bg-green-400">
         <Image src={LogoDesktop} />
       </div>

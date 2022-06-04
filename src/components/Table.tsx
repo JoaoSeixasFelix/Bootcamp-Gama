@@ -14,11 +14,10 @@ type PropsTable = {
 };
 
 export const TablePrograms = (props: PropsTable) => {
-
   const [show, setShow] = useState(true);
 
   return (
-    <div className="overflow-x-auto w-full shadow-md sm:rounded-lg">
+    <div className="overflow-x-auto block w-full shadow-md sm:rounded-lg">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead className="text-xs text-gray-700 uppercase border-y-2 border-gray-300 dark:bg-gray-700 dark:text-gray-400">
           <tr>
@@ -54,7 +53,7 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
             <td className="text-center items-center">
-              <Image src={List} style={{cursor: "pointer"}} />
+              <Image src={List} style={{ cursor: "pointer" }} />
             </td>
             <td className="text-center items-center">
               <IconQrCode />
@@ -78,7 +77,7 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
             <td className="text-center items-center">
-              <Image src={List} style={{cursor: "pointer"}} />
+              <Image src={List} style={{ cursor: "pointer" }} />
             </td>
             <td className="text-center items-center">
               <IconQrCode />
@@ -101,7 +100,7 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
             <td className="text-center items-center">
-              <Image src={List} style={{cursor: "pointer"}} />
+              <Image src={List} style={{ cursor: "pointer" }} />
             </td>
             <td className="text-center items-center">
               <IconQrCode />
@@ -124,7 +123,7 @@ export const TablePrograms = (props: PropsTable) => {
             <td className="px-6 py-4">25</td>
             <td className="px-6 py-4">16/04/2022</td>
             <td className="text-center items-center">
-              <Image src={List} style={{cursor: "pointer"}} />
+              <Image src={List} style={{ cursor: "pointer" }} />
             </td>
             <td className="text-center items-center">
               <IconQrCode />

@@ -11,7 +11,7 @@ export const MyPrograms = () => {
             <div className="flex h-3/4 items-center font-Poppins text-5xl">
               <Description myprograms={"Meus Programas"} />
             </div>
-            <div className="flex h-1/4 text-lg mb-3 items-end">
+            <div className="block h-1/4 text-lg mb-3 items-end">
               <Description
                 salutation={
                   "Crie e Personalize programas de recompensas para o seu cliente"

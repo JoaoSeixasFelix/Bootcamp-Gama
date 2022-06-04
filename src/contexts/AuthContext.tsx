@@ -3,6 +3,7 @@ import Router from "next/router";
 
 import { api } from "../services/api";
 import { parseCookies, setCookie } from "nookies";
+import { AxiosResponse } from "axios";
 
 type User = {
   id: number;
@@ -35,29 +36,34 @@ export const AuthProvider = ({ children }) => {
   const isAuthenticated = !!user;
 
   useEffect(() => {
-    const { "fidplus.token": token } = parseCookies();
-    if (token) {
-      //Recover info passing token to backend
+    async function test() {
+      const { "fidplus.token": token } = parseCookies();
+      if (token) {
+        const client: any = await api.get("/login/me");
+        setUser(client);
+        Router.push("/userhomepage");
+      }
     }
+    test();
   }, []);
 
-  // const signIn = async ({email ,password}: SignInData) => {
-  //     const {token, client} = await api.get("/login/client", {
-  //       email,
-  //       password,
-  //     })
-  //     setCookie(undefined, 'fidplus.token',token, {
-  //       maxAge: 60 * 60 * 24 // 1 dia
-  //     })
+  const signIn = async ({ email, password }: SignInData) => {
+    const { token, client }: any = await api.get("/login/client", {
+      email,
+      password,
+    });
 
-  //     setUser(client)
+    setCookie(undefined, "fidplus.token", token, {
+      maxAge: 60 * 60 * 1, // 1 dia
+    });
 
-  //     Router.push('/userhomepage')
+    setUser(client);
 
-  // }
+    Router.push("/userhomepage");
+  };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated }}>
+    <AuthContext.Provider value={{ user, signIn, isAuthenticated }}>
       {children}
     </AuthContext.Provider>
   );

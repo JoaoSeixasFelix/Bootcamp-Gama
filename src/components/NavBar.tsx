@@ -2,14 +2,16 @@ import classNames from "classnames";
 import Link from "next/link";
 import UserModal from "./ComponentsGenerics/DropDonwUser";
 
-export default function NavBar(username) {
+
+
+export default function NavBar(username, userUrl) {
   return (
     <div className="flex flex-col">
       <nav className="flex flex-col">
         <div className="-mt-9 bg-green-500 ">
           <div className=" user-picture ml-5 flex mt-14 mb-3 items-center w-12 h-10 rounded-full bg-white">
             <img
-              src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+              src={userUrl}
               className="rounded-full w-32 shadow-lg"
               alt="Avatar"
             />
