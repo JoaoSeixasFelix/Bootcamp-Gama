@@ -9,7 +9,7 @@ import Modal from "../components/ComponentsGenerics/ModalQr";
 import { api } from "../services/api";
 import { AuthContext } from "../contexts/AuthContext";
 
-const userHomePage = () => {
+const UserHomePage = () => {
   const [users, setUsers] = useState([]);
 
   const { user } = useContext(AuthContext);
@@ -58,4 +58,4 @@ const userHomePage = () => {
   );
 };
 
-export default userHomePage;
+export default UserHomePage;

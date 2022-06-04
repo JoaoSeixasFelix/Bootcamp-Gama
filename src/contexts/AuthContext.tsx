@@ -19,6 +19,7 @@ type User = {
 type SignInData = {
   email: string;
   password: string;
+  type: string;
   id?: 0 | 1;
 };
 
@@ -47,17 +48,26 @@ export const AuthProvider = ({ children }) => {
     test();
   }, []);
 
-  const signIn = async ({ email, password }: SignInData) => {
-    const { token, client }: any = await api.get("/login/client", {
-      email,
-      password,
-    });
-
-    setCookie(undefined, "fidplus.token", token, {
-      maxAge: 60 * 60 * 1, // 1 dia
-    });
-
-    setUser(client);
+  const signIn = async ({ email, password, type }: SignInData) => {
+    if (type === "client") {
+      const { token, client }: any = await api.post("/login/client", {
+        email,
+        password,
+      });
+      setUser(client);
+      setCookie(undefined, "fidplus.token", token, {
+        maxAge: 60 * 60 * 1, // 1 dia
+      });
+    } else {
+      const { token, client }: any = await api.post("/login/restaurant", {
+        email,
+        password,
+      });
+      setUser(client);
+      setCookie(undefined, "fidplus.token", token, {
+        maxAge: 60 * 60 * 1, // 1 dia
+      });
+    }
 
     Router.push("/userhomepage");
   };
