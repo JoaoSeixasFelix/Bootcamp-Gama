@@ -30,20 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/clients.js"
     ],
-    "/home": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/home.js"
-    ],
     "/statistics": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/statistics.js"
-    ],
-    "/suport": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/suport.js"
     ]
   },
   "ampFirstPages": []

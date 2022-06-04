@@ -1,4 +1,7 @@
+import BarChart from "./BarCharts";
 import Description from "./Description";
+import PieChart from "./PieChartClients";
+import PieChartClients from "./PieChartPrograms";
 import TablePrograms from "./Table";
 import TableClients from "./TableClients";
 
@@ -18,14 +21,20 @@ export const Statistics = () => {
             />
           </div>
         </div>
-        <div className="flex flrex-row items-center justify-around mt-3">
-          <div className="flex justify-center w-96 h-96 bg-gray-700 items-center">
-            Graph 1
+        <div className="flex flrex-row items-center justify-around mt-10">
+          <div className="flex flex-col justify-center w-80 h-80 bg-slate-50 items-center">
+            <span>Retorno com programas</span>
+            <PieChartClients />
           </div>
-          <div className="flex w-96 h-96 bg-gray-700 ">Graph 2</div>
+          <div className="flex flex-col justify-center w-80 h-80  bg-slate-50 items-center">
+            <span>Retorno com programas</span>
+            <PieChart />
+          </div>
         </div>
-        <div className="flex w-full items-center mt-10 justify-center">
-          <div className="flex w-4/5 justify-center h-96 bg-gray-700 ">Insert Grapch Bar Here!</div>
+        <div className="flex w-full items-center mt-6 justify-center">
+          <div className="flex w-full justify-center h-96">
+            <BarChart />
+          </div>
         </div>
       </div>
     </div>
