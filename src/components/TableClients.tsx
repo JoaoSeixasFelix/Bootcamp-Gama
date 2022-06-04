@@ -3,6 +3,7 @@ import Sneakers from "../../public/IconsTable/Sneakers.svg";
 import QrCode from "../../public/Icons/qr_code_2.svg";
 import Delete from "../../public/Icons/delete.svg";
 import { type } from "os";
+import List from "../../public/Icons/expand_more.svg";
 
 type PropsTable = {
   Name: string;
@@ -15,7 +16,7 @@ type PropsTable = {
 
 export const TableClients = (props: PropsTable) => {
   return (
-    <div className="overflow-x-auto w-full shadow-md sm:rounded-lg">
+    <div className="overflow-x-hidden w-full shadow-md sm:rounded-lg">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead className="text-xs text-gray-700 uppercase border-y-2 border-gray-300 dark:bg-gray-700 dark:text-gray-400">
           <tr>
@@ -47,7 +48,9 @@ export const TableClients = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">3/6</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="px-6 py-4 text-right"></td>
+            <td className="px-6 py-4 text-center">
+              <Image src={List} style={{ cursor: "pointer" }} />
+            </td>
           </tr>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <th
@@ -59,7 +62,9 @@ export const TableClients = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">3/6</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="px-6 py-4 text-right"></td>
+            <td className="px-6 py-4 text-center">
+              <Image src={List} style={{ cursor: "pointer" }} />
+            </td>
           </tr>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <th
@@ -71,7 +76,9 @@ export const TableClients = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">3/6</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="h-full px-6 py-4 text-right"></td>
+            <td className="h-full px-6 py-4 text-center">
+              <Image src={List} style={{ cursor: "pointer" }} />
+            </td>
           </tr>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <th
@@ -83,7 +90,9 @@ export const TableClients = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">3/6</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="px-6 py-4 text-right"></td>
+            <td className="px-6 py-4 text-center">
+              <Image src={List} style={{ cursor: "pointer" }} />
+            </td>
           </tr>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <th
@@ -95,7 +104,9 @@ export const TableClients = (props: PropsTable) => {
             <td className="px-6 py-4">Aberto</td>
             <td className="px-6 py-4">3/6</td>
             <td className="px-6 py-4">16/04/2022</td>
-            <td className="px-6 py-4 text-right"></td>
+            <td className="px-6 py-4 text-center">
+              <Image src={List} style={{ cursor: "pointer" }} />
+            </td>
           </tr>
         </tbody>
       </table>

@@ -24,7 +24,7 @@ export const MyClients = () => {
         <div className="flex">
           <TableClients
             Name="Nome"
-            clientName="Isaura dSa"
+            clientName="Isaura Sá Canto"
             Status="Status"
             qantitiesOfCustomers="Visitas"
             start="Última Visita"
