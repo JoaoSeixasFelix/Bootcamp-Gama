@@ -58,6 +58,7 @@ export const AuthProvider = ({ children }) => {
       setCookie(undefined, "fidplus.token", token, {
         maxAge: 60 * 60 * 1, // 1 dia
       });
+      Router.push("/userhome");
     } else {
       const { token, client }: any = await api.post("/login/restaurant", {
         email,
@@ -67,9 +68,8 @@ export const AuthProvider = ({ children }) => {
       setCookie(undefined, "fidplus.token", token, {
         maxAge: 60 * 60 * 1, // 1 dia
       });
+      Router.push("/userhome");
     }
-
-    Router.push("/userhomepage");
   };
 
   return (

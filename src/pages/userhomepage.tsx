@@ -10,8 +10,6 @@ import { api } from "../services/api";
 import { AuthContext } from "../contexts/AuthContext";
 
 const UserHomePage = () => {
-  const [users, setUsers] = useState([]);
-
   const { user } = useContext(AuthContext);
 
   return (

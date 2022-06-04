@@ -7,23 +7,26 @@ import Button from "../components/ComponentsGenerics/Button";
 import Description from "../components/Description";
 import Logo from "../components/Logo";
 import SocialMediaLogin from "../components/SocialMediaIcons";
+import Router from "next/router";
 
 const SignIN = () => {
   const { signIn, user } = useContext(AuthContext);
   const [nameInput, setNameInput] = useState("");
   const [passWordInput, setPassWordInput] = useState("");
+  console.log(user);
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await signIn({
-  //       email: nameInput,
-  //       password: passWordInput,
-  //     });
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await signIn({
+        email: "bolao3s2@hotmail.com ",
+        password: "bolao123",
+      });
+      Router.push('/userhome')
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className="overflow-hidden h-full w-screen flex flex-col items-center justify-center">
@@ -32,7 +35,7 @@ const SignIN = () => {
       </div>
       <form
         className="flex flex-col items-center justify-center w-screen h-72 mt-6"
-        onSubmit={(e) => e}
+        onSubmit={(e) => handleSubmit(e)}
       >
         <div className="flex mr-56 mb-8 text-4xl text-zinc-500 font-Poppins">
           <Description salutation="Olá!" />
