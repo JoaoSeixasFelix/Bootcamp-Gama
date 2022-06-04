@@ -22,11 +22,11 @@ export const Statistics = () => {
           </div>
         </div>
         <div className="flex flrex-row items-center justify-around mt-10">
-          <div className="flex flex-col justify-center w-80 h-80 bg-slate-50 items-center">
+          <div className="flex -mr-80 flex-col justify-center w-80 h-80 bg-slate-50 items-center">
             <span>Retorno com programas</span>
             <PieChartClients />
           </div>
-          <div className="flex flex-col justify-center w-80 h-80  bg-slate-50 items-center">
+          <div className="flex flex-col -ml-10 justify-center w-80 h-80  bg-slate-50 items-center">
             <span>Retorno com programas</span>
             <PieChart />
           </div>

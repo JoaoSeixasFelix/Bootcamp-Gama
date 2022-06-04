@@ -1,8 +1,5 @@
-import MyClients from "../components/MyClients";
-import MyPrograms from "../components/MyPrograms";
 import SideBar from "../components/Sidebar";
 import Statistics from "../components/Statistics";
-import HelpDesk from "../components/Suport";
 import LogoDesktop from "../../public/Logo/LogoFigPlus.svg";
 import Image from "next/image";
 
