@@ -4,6 +4,8 @@ import Input, { Selection } from "../components/ComponentsGenerics/Input";
 import { api } from "../services/api";
 import Button from "../components/ComponentsGenerics/Button";
 import Logo from "../components/Logo";
+import Link from "next/link";
+import Description from "../components/Description";
 
 const SignUp = () => {
   const [signUpNameInput, setSignUpNameInput] = useState("");
@@ -109,6 +111,11 @@ const SignUp = () => {
           Cadastre-se!{" "}
         </Button>
       </form>
+      <Link href={"/signin"}>
+        <a className=" flex flex-col justify-center items-center w-screen mt-14">
+          <Description forgotyourpassword="Já Possui Cadastro? Clique aqui!" />
+        </a>
+      </Link>
     </div>
   );
 };
