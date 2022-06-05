@@ -3,6 +3,7 @@ import Router from "next/router";
 
 import { api } from "../services/api";
 import { parseCookies, setCookie } from "nookies";
+import { AxiosResponse } from "axios";
 
 type User = {
   id: number;
@@ -16,14 +17,15 @@ type User = {
 };
 
 type SignInData = {
-  email: string;
-  password: string;
+  email?: string;
+  password?: string;
+  type?: string;
   id?: 0 | 1;
 };
 
 type AuthContextType = {
   user: User | null;
-  signIn?: (data: SignInData) => Promise<void>;
+  signIn: (data: SignInData) => Promise<void>;
   isAuthenticated: boolean;
 };
 
@@ -35,29 +37,43 @@ export const AuthProvider = ({ children }) => {
   const isAuthenticated = !!user;
 
   useEffect(() => {
-    const { "fidplus.token": token } = parseCookies();
-    if (token) {
-      //Recover info passing token to backend
+    async function test() {
+      const { "fidplus.token": token } = parseCookies();
+      if (token) {
+        const client: any = await api.get("/login/me");
+        setUser(client);
+        Router.push("/userhomepage");
+      }
     }
+    test();
   }, []);
 
-  // const signIn = async ({email ,password}: SignInData) => {
-  //     const {token, client} = await api.get("/login/client", {
-  //       email,
-  //       password,
-  //     })
-  //     setCookie(undefined, 'fidplus.token',token, {
-  //       maxAge: 60 * 60 * 24 // 1 dia
-  //     })
-
-  //     setUser(client)
-
-  //     Router.push('/userhomepage')
-
-  // }
+  const signIn = async ({ email, password, type }: SignInData) => {
+    if (type === "client") {
+      const { token, client }: any = await api.post("/login/client", {
+        email,
+        password,
+      });
+      setUser(client);
+      setCookie(undefined, "fidplus.token", token, {
+        maxAge: 60 * 60 * 1, // 1 dia
+      });
+      Router.push("/userhome");
+    } else {
+      const { token, client }: any = await api.post("/login/restaurant", {
+        email,
+        password,
+      });
+      setUser(client);
+      setCookie(undefined, "fidplus.token", token, {
+        maxAge: 60 * 60 * 1, // 1 dia
+      });
+      Router.push("/userhome");
+    }
+  };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated }}>
+    <AuthContext.Provider value={{ user, signIn, isAuthenticated }}>
       {children}
     </AuthContext.Provider>
   );

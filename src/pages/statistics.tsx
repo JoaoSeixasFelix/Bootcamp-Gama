@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const HomeStatistics = () => {
   return (
-    <div className=" flex flex-col w-full h-full">
+    <div className=" flex flex-col w-full h-full overflow-y-hidden">
       <div className=" Header flex justify-center h-16 w-full items-center bg-green-400">
         <Image src={LogoDesktop} />
       </div>

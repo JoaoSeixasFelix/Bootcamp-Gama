@@ -5,13 +5,16 @@ import BencaBecoi from "../../public/RestaurantPictures/BençaBençoi.svg";
 import Nine from "../../public/RestaurantPictures/RestauranteNine.svg";
 import FavIcon from "../../public/Icons/FavIcon.svg";
 import Modal from "../components/ComponentsGenerics/ModalQr";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 const userFavorites = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div className="flex flex-col w-screen h-screen items-center justify-center mb-5">
       <div className="flex flex-col">
         <NavBar
-          name="Joao Felix"
+          name={user?.name}
           activeFav="border-b-2"
           colorFav="border-black"
         />

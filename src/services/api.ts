@@ -5,7 +5,7 @@ import { parseCookies } from "nookies";
 const { "nextauth.token": token } = parseCookies();
 
 export const api = axios.create({
-  baseURL: "http://localhost:3333",
+  baseURL: "https://fidplus-backendv2.herokuapp.com",
 });
 
 if (token) {

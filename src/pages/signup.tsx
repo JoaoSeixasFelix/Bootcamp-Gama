@@ -13,18 +13,18 @@ const SignUp = () => {
   const [signUpEmailInput, setSignUpEmailInput] = useState("");
   const [signUpPassWordInput, setSignupPassWordInput] = useState("");
 
-  const handleSubmit = useCallback(
-    (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      api.post("e81ccdd9-b940-49d4-bee5-0ebd60c47de3", {
+  const handleSubmit = useCallback(async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      await api.post("/restaurant", {
         name: signUpNameInput,
-        typeclient: signUpTypeClient,
         email: signUpEmailInput,
         password: signUpPassWordInput,
       });
-    },
-    [signUpEmailInput, signUpEmailInput, signUpTypeClient, signUpPassWordInput]
-  );
+    } catch (error) {
+      console.error(error);
+    }
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center h-screen w-screen">
