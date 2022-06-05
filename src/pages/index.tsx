@@ -1,12 +1,10 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import SignUp from "./signup";
+import SignIN from "./signin";
 
 const Home: NextPage = () => {
   return (
     <div>
-      <SignUp />
+      <SignIN />
     </div>
   );
 };
