@@ -4,7 +4,10 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: { borderRadius: { "md-qr": "15%" } },
+    extend: {
+      borderRadius: { "md-qr": "15%" },
+      height: { "9/10": "90%", "1/10": "10%", "9.5":"95%" },
+    },
     fontFamily: {
       Poppins: ["Poppins", "sans-serif"],
       Roboto: ["Roboto", "sans-serif"],

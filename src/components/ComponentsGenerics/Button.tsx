@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { Dispatch, SetStateAction } from "react";
 
 type Props = React.PropsWithChildren<{
-  onClick: () => void | Dispatch<SetStateAction<any>>;
+  onClick?: () => void | Dispatch<SetStateAction<any>>;
   type: "submit" | "button" | "reset" | undefined;
   disabled?: boolean;
   width?: string;
@@ -11,6 +11,7 @@ type Props = React.PropsWithChildren<{
   textColor: string;
   border?: string;
   borderColor?: string;
+  borderRadius?: string;
   margin?: string;
   marginTop?: string;
   marginRight?: string;
@@ -35,6 +36,7 @@ export const Button = ({
   textColor,
   border,
   borderColor,
+  borderRadius,
   margin,
   marginTop,
   marginRight,
@@ -59,6 +61,7 @@ export const Button = ({
            ${height}
            ${border}
            ${borderColor}
+           ${borderRadius}
            ${margin}
            ${marginTop}
            ${marginRight}

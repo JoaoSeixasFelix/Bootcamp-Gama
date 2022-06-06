@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/ComponentsGenerics/NavBar";
 import RestaurantDescription from "../components/ComponentsGenerics/MenuList";
 import Feijao from "../../public/RestaurantPictures/PadariaeRestauranteDiamantina.svg";
 import BencaBecoi from "../../public/RestaurantPictures/BençaBençoi.svg";

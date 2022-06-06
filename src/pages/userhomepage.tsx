@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/ComponentsGenerics/NavBar";
 import RestaurantDescription from "../components/ComponentsGenerics/MenuList";
 import HamburgueriaAlfandega from "../../public/RestaurantPictures/HamburgueriaAlfandega.svg";
 import RestaurantDonaAna from "../../public/RestaurantPictures/RestaurantDonaAna.svg";

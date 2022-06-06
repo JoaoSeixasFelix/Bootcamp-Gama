@@ -1,11 +1,12 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/clients": "pages/clients.html",
   "/forgotpassword": "pages/forgotpassword.html",
+  "/_error": "pages/_error.js",
   "/home": "pages/home.html",
   "/": "pages/index.html",
+  "/ladingpage": "pages/ladingpage.html",
   "/recoverypassword": "pages/recoverypassword.html",
   "/signin": "pages/signin.html",
   "/signup": "pages/signup.html",
