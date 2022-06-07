@@ -11,7 +11,7 @@ const LadingPage = () => {
         <NavBarLading />
       </div>
 
-      <div className="h-full">
+      <div className="h-screen">
         <div className="h-9.7 overflow-y-auto flex flex-col justify-start">
           <div>
             <Image src={HomeLadingPage} width={3000} />
@@ -25,7 +25,7 @@ const LadingPage = () => {
               usuarios.
             </p>
           </div>
-          <div>
+          <div className="flex items-start">
             <Footer />
           </div>
         </div>

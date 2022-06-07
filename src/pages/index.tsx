@@ -5,7 +5,7 @@ import SignIN from "./signin";
 const Home: NextPage = () => {
   return (
     <div>
-      <LadingPage />
+      <SignIN />
     </div>
   );
 };
